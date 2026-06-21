@@ -1,0 +1,2942 @@
+# zh_CN resources
+signature="sIgNaTuRe"
+###
+###
+
+HostInventoryFullEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机InventoryFull事件">\
+       <description>\
+          The vCenter Server Foundation license key currently allows only three hosts to \
+          be added 到 inventory. Adding extra hosts results in errors \
+          和 the logging of this event. \
+       </description>\
+       <cause>\
+            <description>Attempting to add more hosts than the number allowed by the license \
+                         key assigned to vCenter Server</description>\
+            <action>Assign vCenter Server a license key that allows more hosts or has \
+                    no host limit</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+LicenseNonComplianceEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.许可证Non合规性事件">\
+       <description>\
+          vCenter Server does not strictly enforce license usage. Instead, it checks for license \
+          overuse periodically. If vCenter Server detects overuse, it logs this event 和 \
+	  triggers an alarm.\
+       </description>\
+       <cause>\
+            <description>Overuse of licenses</description>\
+            <action>Check the license reports 到 the vSphere Client 和 reduce the number of \
+                    entities 使用 the license key or add a new license key with a greater \
+                    capacity</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+LicenseServerUnavailableEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.许可证服务器Un可用事件">\
+       <description>\
+          vCenter Server tracks the license server state 和 logs this event if \
+          the license server has stopped responding. \
+       </description>\
+       <cause>\
+            <description>License server 不 responding 和 not available to vCenter Server</description>\
+            <action>Verify that the license server is running. If it is, check the connectivity 介于 \
+                    vCenter Server 和 the license server.</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+NoLicenseEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.No许可证事件">\
+       <description>\
+          vCenter Server logs this event if it fails to acquire a feature 从 license server for an \
+          unknown reason. \
+       </description>\
+       <cause>\
+            <description>Acquiring a feature license fails for an unknown reason</description>\
+            <action>Verify that the license server has the license 的 feature</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+
+InvalidEditionEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.无效Edition事件">\
+       <description>\
+          vCenter Server attempted to acquire an undefined feature 从 license server \
+       </description>\
+       <cause>\
+            <description>Any operation that requires a feature license 例如 vMotion, DRS, vSphere HA might result \
+                         in this event if that feature 不 defined 在 license server</description>\
+            <action>Verify that the feature in question is present 在 license server</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostLicenseExpiredEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机许可证Expired事件">\
+       <description>\
+          vCenter Server tracks the expiration times of host licenses 在 license server \
+          和 uses this event to notify you of any host licenses —— about to expire\
+       </description>\
+       <cause>\
+            <description>Host licenses 在 license server are about to expire</description>\
+            <action>Update the license server to get a new version 的 host license</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+VMotionLicenseExpiredEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VMotion许可证Expired事件">\
+       <description>\
+          vCenter Server tracks the expiration times of vMotion licenses 在 license server \
+          和 uses this event to notify you of any vMotion licenses —— about to expire\
+       </description>\
+       <cause>\
+            <description>vMotion licenses 在 license server are about to expire</description>\
+            <action>Update the license server to get a fresher version 的 vMotion license</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+LicenseRestrictedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.许可证Restricted事件">\
+       <description>\
+          vCenter Server logs this event if it is unable to check out a license 从 \
+          license server due to restrictions 在 license file \
+       </description>\
+       <cause>\
+            <description>License file 在 license server has restrictions that prevent check out</description>\
+            <action>Check the license file 和 remove any restrictions that you can</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+VmFailedToPowerOffEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm失败To电源Off事件">\
+      <description>The virtual machine failed to power off</description>\
+      <cause>\
+         <description>\
+            The virtual machine might be performing concurrent operations\
+         </description>\
+         <action>Complete the concurrent operations 和 retry the power-off operation</action>\
+      </cause>\
+      <cause>\
+         <description>The virtual machine is in an invalid state. Virtual machines can enter an \
+	    invalid state for many reasons, 例如 datastore inaccessibility. </description>\
+         <action>\
+            Identify the reason that the virtual machine entered an invalid state, correct the problem, \
+	    和 retry the operation.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmFailedToPowerOnEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm失败To电源On事件">\
+      <description>\
+         The virtual machine failed to power on\
+      </description>\
+      <cause>\
+         <description>\
+            Virtual machine power-on attempts can fail because the virtual machine is already in a \
+            powered-on state, concurrent operations are running 在 virtual machine, 和 so on. </description>\
+         <action>\
+	  Check the reason 在 event message to find the cause 的 power-on failure 和 fix the problem.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmFailedToRebootGuestEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm失败ToRebootGuest事件">\
+      <description>\
+         The guest operating system 在 virtual machine failed to reboot.\
+      </description>\
+      <cause>\
+         <description>\
+            Guest operating system reboot failures can occur because the virtual machine 不 in a \
+	    powered-on state, concurrent operations are running 在 virtual machine, 和 so on.\
+         </description>\
+	 <action>\
+	  Check the reason 在 event message to find the cause 的 reboot failure 和 fix the problem.\
+         </action>\
+       </cause>\
+   </EventLongDescription>\
+   "
+
+VmFailedToResetEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm失败To重置事件">\
+      <description>The virtual machine failed to reset</description>\
+      <cause>\
+         <description>\
+		The virtual machine might be waiting for a response to a question or prompt</description>\
+         <action>\
+            Go 到 Summary tab 的 virtual machine in vSphere client 和 respond 到 question \
+	    or prompt\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>There might not be enough available licenses to perform this operation.</description>\
+         <action>\
+            Obta在 required licenses 和 retry the reset operation\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            Concurrent operations might be executing 在 virtual machine\
+         </description>\
+         <action>Complete the concurrent operations 和 retry the reset operation</action>\
+      </cause>\
+      <cause>\
+         <description>\
+            The host on which the virtual machine is running is entering maintenance mode\
+         </description>\
+         <action>\
+            Wait until the host exits maintenance mode 和 retry the operation\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>The virtual machine is in an invalid state. Virtual machines can enter an \
+	    invalid state for many reasons, 例如 datastore inaccessibility.</description>\
+         <action>\
+            Identify the reason that the virtual machine entered an invalid state, correct the problem, \
+	    和 retry the operation.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmUpgradingEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmUpgrading事件">\
+      <description>The virtual hardware on this virtual machine is being upgraded</description>\
+      <cause>\
+         <description>A user-initiated action triggered an upgrade 的 virtual machine hardware</description>\
+      </cause>\
+      <cause>\
+         <description>A scheduled task started an upgrade 的 virtual machine hardware</description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmUuidAssignedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmUuID已分配事件">\
+      <description>The virtual machine was assigned a new BIOS UUID</description>\
+      <cause>\
+         <description>The user who created the virtual machine did not specify a BIOS UUID at creation time. \
+            vCenter Server generated a new UUID 和 assigned it 到 virtual machine.\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmInstanceUuidAssignedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmInstanceUuID已分配事件">\
+      <description>The virtual machine was assigned a new vCenter Server-specific instance UUID\
+      </description>\
+      <cause>\
+         <description> \
+             The user who created the virtual machine did not specify a vCenter Server-specific instance \
+             UUID at creation time. vCenter Server generated a new UUID 和 assigned it 到 \
+	     virtual machine.\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmUuidChangedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmUuID已更改事件">\
+      <description>The virtual machine BIOS UUID has changed</description>\
+      <cause>\
+         <description>\
+            A user changed the virtual machine BIOS UUID directly 在 host\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmInstanceUuidChangedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmInstanceUuID已更改事件">\
+      <description> \
+         The vCenter Server-specific instance UUID 的 virtual machine has changed\
+      </description> \
+      <cause>\
+         <description>\
+            A user action resulted in a change 到 vCenter Server-specific instance UUID of \
+            the virtual machine\
+         </description>\
+      </cause>\
+      <cause>\
+         <description>\
+            vCenter Server changed the instance UUID 的 virtual machine because it detected \
+            a conflict\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmInstanceUuidConflictEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmInstanceUuID已更改事件">\
+      <description> \
+         The vCenter Server-specific instance UUID 的 virtual machine conflicted with that of \
+         another virtual machine. \
+      </description>\
+      <cause>\
+         <description>\
+             Virtual machine instance UUID conflicts can occur if you copy virtual machine files \
+             manually without 使用 vCenter Server. \
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmRelocateFailedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmRelocate失败事件">\
+      <description>\
+         Virtual machine relocation to a different host or datastore failed\
+      </description>\
+      <cause>\
+         <description>\
+            Virtual machine relocation can fail for a number of reasons, including \
+            network outages, insufficient disk space, 和 so on\
+         </description>\
+         <action>\
+            Consider the task related to this event, evaluate the failure reason, 和 take action accordingly\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmUnsupportedStartingEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm不支持Starting事件">\
+      <description>\
+         Attempting to power on a virtual machine 具有 an unsupported guest operating system\
+      </description>\
+      <cause>\
+         <description>\
+            A user action initiated a virtual machine power-on operation, but the virtual machine has \
+	    an unsupported guest operating system.\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+# VmRegisteredEvent: Basic event has enough details
+# VmRenamedEvent: Basic event has enough details
+# VmUuidConflictEvent: Not used anymore
+
+VmFailedToShutdownGuestEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm失败To关机Guest事件">\
+      <description>\
+         Guest operating system shutdown failed 的 virtual machine\
+      </description>\
+      <cause>\
+         <description>\
+            Guest operating system shutdown can fail if VMware Tools \
+            不 installed 在 virtual machine.\
+         </description>\
+         <action>Install VMware Tools.</action>\
+      </cause>\
+      <cause>\
+         <description>\
+	    The virtual machine might be waiting for a response to a question or prompt</description>\
+         <action>\
+            Go 到 Summary tab 的 virtual machine in vSphere Client 和 respond 到 question \
+	    or prompt\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            Concurrent operations might be running 在 virtual machine\
+         </description>\
+         <action>Complete the concurrent operations 和 retry the shutdown operation</action>\
+      </cause>\
+      <cause>\
+         <description>The virtual machine is in an invalid state. Virtual machines can enter an \
+	    invalid state for many reasons, 例如 datastore inaccessibility.</description>\
+         <action>\
+            Identify the reason that the virtual machine entered an invalid state, correct the problem, \
+	    和 retry the operation.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+AlarmEmailFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.警报Email失败事件">\
+       <description>\
+          An error occurred while sending email notification of a triggered alarm\
+       </description>\
+       <cause>\
+            <description>Failed to send email for a triggered alarm</description>\
+            <action>Check the vCenter Server SMTP settings for sending email notifications</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+    
+AlarmReconfiguredEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.警报已重新配置事件">\
+       <description>\
+          An alarm has been reconfigured \
+       </description>\
+       <cause>\
+            <description>A user has reconfigured an alarm</description>\
+       </cause>\
+    </EventLongDescription>\
+    "
+        
+AlarmScriptFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.警报Script失败事件">\
+       <description>\
+          The vCenter Server logs this event if an error occurs while running a script after an alarm triggers.\
+       </description>\
+       <cause>\
+            <description>There was an error running the script</description>\
+            <action>Fix the script or failure condition</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+    
+AlarmSnmpFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.警报SNMP失败事件">\
+       <description>\
+          The vCenter Server logs this event if an error occurs while sending an SNMP trap when an alarm triggers.\
+       </description>\
+       <cause>\
+            <description>An SNMP trap could not be sent for a triggered alarm</description>\
+            <action>Check the vCenter Server SNMP settings. Make sure that the vCenter Server network can handle SNMP packets.</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+   
+   
+ScheduledTaskEmailFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Scheduled任务Email失败事件">\
+       <description>\
+          An error occurred while sending email notification that a scheduled task is running\
+       </description>\
+       <cause>\
+            <description>Failed to send email 的 scheduled task</description>\
+            <action>Check the vCenter Server SMTP settings for sending emails</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+ScheduledTaskFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Scheduled任务失败事件">\
+       <description>\
+          An error occurred while running a scheduled task \
+       </description>\
+       <cause>\
+            <description>Failed to run a scheduled task</description>\
+            <action>Correct the failure condition</action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+
+DasAgentUnavailableEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Das代理Un可用事件">\
+       <description>\
+          vCenter Server 不 able to contact any good primary hosts 在 vSphere HA cluster. \
+          vSphere HA protection may not be available for virtual machines running 在 cluster. \
+          In addition, you cannot enable or reconfigure vSphere HA on hosts 在 \
+          cluster until contact 介于 vCenter Server 和 a good primary host is restored.\
+       </description>\
+       <cause>\
+          <description>\
+             There was a network outage, 和 all hosts show up 在 inventory as "not responding"\
+          </description>\
+          <action>Restore the network</action>\
+       </cause>\
+       <cause>\
+          <description>All the primary hosts 在 cluster failed</description>\
+          <action>\
+             If the failed primary hosts cannot be restored, disable vSphere HA 在 cluster, \
+             wait 的 Unconfigure vSphere HA tasks to complete on all hosts, 和 \
+             re-enable vSphere HA 在 cluster\
+          </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+DasDisabledEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Das已禁用事件">\
+       <description>\
+          vSphere HA has been disabled on this host due to a user action. vSphere HA is disabled when a host \
+          is disconnected from vCenter Server or placed into maintenance or standby mode. \
+          Virtual machines on other hosts 在 cluster will not be failed over \
+          to this host 在 event of a host failure. In addition, if the host is disconnected, \
+          any virtual machines running on this host will not be failed if the host fails. Further, \
+          no attempt will be made by vSphere HA VM 和 Application Monitoring to reset VMs. \
+       </description>\
+    </EventLongDescription>\
+    "
+
+DasEnabledEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Das已启用事件">\
+       <description>\
+          vSphere HA has been enabled on this host due to a user action. vSphere HA is enabled when a host \
+          is added to or moved into a vSphere HA cluster or when vSphere HA is enabled on a cluster. If the host \
+          was already in a vSphere HA cluster, vSphere HA will be enabled when the host is reconnected to vCenter \
+          Server or brought out of maintenance or standby mode. vSphere HA will attempt to protect any VMs —— \
+          running 在 host at the time that HA is enabled on it. \
+       </description>\
+    </EventLongDescription>\
+    "
+
+HostDasEnablingEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.主机Das正在启用事件">\
+        <description>\
+           vSphere HA is being enabled on this host.\
+        </description>\
+     </EventLongDescription>\
+     "
+
+InsufficientFailoverResourcesEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.InsufficientFailover资源事件">\
+        <description>\
+            The cluster does not have enough unreserved capacity to satisfy the level configured \
+            for vSphere HA admission control. Failovers may still be performed by vSphere HA but will be on a \
+            best effort basis.\
+        </description>\
+        <cause>\
+            <description>\
+                If the "number of host failures to tolerate" policy is configured 和 a few \
+                virtual machines have a much higher CPU or memory reservation than the other \
+                virtual machines, vSphere HA admission control can be excessively conservative \
+                to ensure that there are enough unfragmented resources if a host fails.\
+            </description>\
+            <action>\
+                Use similar CPU 和 memory reservations for all virtual machines \
+                在 cluster. If this 不 possible, consider 使用 a different vSphere HA admission \
+                control policy, 例如 reserving a percentage of cluster resource for failover. \
+                Alternatively, you can use advanced options to specify a cap 的 slot size. \
+                See the vSphere Availability Guide for details.\
+            </action>\
+        </cause>\
+        <cause>\
+           <description>\
+                Hosts with vSphere HA agent errors are not good candidates \
+                for providing failover capacity 在 cluster, 和 their resources are \
+                not considered for vSphere HA admission control purposes. If many hosts have an \
+                vSphere HA agent error, vCenter Server generates this event.\
+           </description>\
+           <action>\
+                Check the event log 的 hosts to determine the cause 的 vSphere HA agent errors. \
+                After addressing any configuration issues, reconfigure vSphere HA 在 affected \
+                hosts or 在 cluster.\
+           </action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmDasBeingResetEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.VmDasBeing重置事件">\
+        <description>\
+           The virtual machine was reset by vSphere HA. Depending on how vSphere HA has been configured, \
+           the virtual machine might be reset because the VMware Tools heartbeat or application \
+           heartbeat status turned red.\
+        </description>\
+        <cause>\
+           <description>\
+                The VMware Tools heartbeat turned red. This condition can occur if the operating \
+                system failed with a blue screen or becomes unresponsive. It also can occur because \
+		VMware Tools failed or was shut down.\
+           </description>\
+           <action>\
+                If the virtual machine is reset frequently, check for a \
+                persistent problem 使用 operating system that requires attention. \
+                Consider configuring the cluster so that vSphere HA waits for a longer period after \
+                heartbeats are lost before taking action. Specifying a longer period helps avoid \
+                triggering resets for transient problems. You can force a longer period by decreasing \
+		the "monitoring sensitivity" 在 VM Monitoring section 的 Edit Cluster wizard.\
+           </action>\
+        </cause>\
+        <cause>\
+           <description>\
+                The application heartbeat turned red. This condition can occur if the application \
+                —— configured to send heartbeats failed or became unresponsive.\
+           </description>\
+           <action>\
+                Determine if the application stopped sending heartbeats because of a configuration \
+                error 和 remediate the problem.\
+           </action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmDasBeingResetWithScreenshotEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.VmDasBeing重置WithScreenshot事件">\
+        <description>\
+           The virtual machine was reset by vSphere HA. Depending on how vSphere HA is configured, \
+           this condition can occur because the VMware Tools heartbeat or the application \
+           heartbeat status turned red. The event contains the location 的 screenshot \
+           taken 的 guest console before it was reset. You can use this information to determine\
+           the cause 的 heartbeat failure.\
+        </description>\
+        <cause>\
+           <description>\
+                The VMware Tools heartbeat turned red. This condition can occur if the operating \
+                system failed with a blue screen or becomes unresponsive. It also can occur because \
+		VMware Tools failed or was shut down.\
+           </description>\
+           <action>\
+                Check the screenshot image to see if the cause was a guest operating system failure.\
+                If the virtual machine is reset frequently, check for a \
+                persistent problem 使用 operating system that requires attention. \
+                Consider configuring the cluster so that vSphere HA waits for a longer period after \
+                heartbeats are lost before taking action. Specifying a longer period helps avoid \
+                triggering resets for transient problems. You can force a longer period by decreasing \
+		the "monitoring sensitivity" 在 VM Monitoring section 的 Edit Cluster wizard.\
+           </action>\
+        </cause>\
+        <cause>\
+           <description>\
+                The application heartbeat turned red. This condition can occur if the application \
+                —— configured to send heartbeats failed or became unresponsive.\
+           </description>\
+           <action>\
+                Determine if the application stopped sending heartbeats because of a configuration \
+                error 和 remediate the problem.\
+           </action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmDasResetFailedEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.VmDas重置失败事件">\
+        <description>\
+            vSphere HA attempted to reset the virtual machine because of a heartbeat failure \
+            from VMware Tools or a guest application, 取决于 how vSphere HA was \
+            configured. However, the reset operation failed.\
+        </description>\
+        <cause>\
+            <description>\
+                The most likely reason 的 reset failure is that the virtual machine was running \
+                another task at the time the reset was initiated.\
+            </description>\
+            <action>Check to see whether the virtual machine requires attention 和 reset \
+                it manually if necessary.</action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmFailoverFailed.longDescription= "\
+     <EventLongDescription id="vim.事件.VmFailover失败">\
+        <description>\
+           vSphere HA did not failover this virtual machine. The event includes the details 的 fault that \
+           was generated when vSphere HA attempted the failover. vSphere HA will retry the failover on another \
+           host unless the maximum number of failover attempts have been exceeded. In many cases, the retry \
+           will succeed.\
+        </description>\
+        <cause>\
+           <description>\
+                The failover did not succeed because a problem occurred while vSphere HA was trying to restart \
+                the virtual machine. Possible problems include the inability to register or reconfigure the virtual\
+                machine 在 new host because another operation 在 same virtual machine is\
+                already in progress, or because the virtual machine is still powered on. It may also occur if the \
+                configuration file 的 virtual machine is corrupt.\
+           </description>\
+           <action> \
+                   If vSphere HA is unable to failover the virtual machine after repeated attempts, investigate the \
+                   error reported by each occurrence of this event, or trying powering 在 virtual \
+                   machine 和 investigate any returned errors.\
+           </action> \
+           <action> \
+                   If the error reports that a \
+                   file is locked, the VM may be powered on a host that the vSphere HA master agent can no longer \
+                   monitor 使用 the management network or heartbeat datastores, or it may have been powered on 由 \
+                   user on a host outside 的 cluster. If any hosts have been declared dead, investigate whether a \
+                   networking/storage issue may be the cause. \
+           </action> \
+           <action> \
+                   If, however, the error reports that the virtual machine is \
+                   in an invalid state, there may be an in-progress operation —— preventing access 到 \
+                   virtual machine's files. Investigate whether there are in-progress operations, 例如 a clone operation \
+                   —— taking a long time to complete. \
+           </action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmMaxRestartCountReached.longDescription= "\
+     <EventLongDescription id="vim.事件.VmMax重新启动计数Reached">\
+        <description>\
+           vSphere HA has reached the maximum number of failover attempts for this virtual \
+           machine 和 has not been able to restart it. No further failover attempts \
+           will be made. By default vSphere HA attempts to failover a virtual machine 5 times. \
+        </description>\
+        <cause>\
+           <description>\
+                Failover can fail for a number of reasons including that  \
+                the configuration file 的 virtual machine is corrupt or one or more 的 virtual \
+                machines datastores are not accessible 由ny host 在 cluster due to an all paths\
+                down condition. In addition, the VM may be powered on a host that the vSphere HA master agent \
+                can no longer monitor 使用 the management network or heartbeat datastores, or it may have been \
+                powered on 由 user on a host outside 的 cluster. \
+           </description>\
+           <action>\
+                To determine why previous failover attempts failed, search the events —— logged \
+                的 VM for occurrences 的 event vSphere HA reports when a failover fails. These events \
+                will report the reason 的 failed failover. vSphere HA events can be located by searching \
+                的 phrase 'vSphere HA'. To determine whether any issues still exist, try \
+                to manually power 在 virtual machine. If power-on fails, investigate the error \
+                —— returned. But, if the power-on remains pending for a long time, \
+                investigate whether an all paths down condition exists. Also, if any hosts have been declared dead,\
+                investigate whether a networking or storage issue may be the cause. \
+           </action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmPowerOffOnIsolationEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.Vm电源OffOnIsolation事件">\
+        <description>\
+           vSphere HA powered off this virtual machine because the host it was running on \
+           was isolated 从 management network. \
+        </description>\
+     </EventLongDescription>\
+     "
+
+VmShutdownOnIsolationEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.Vm关机OnIsolation事件">\
+        <description>\
+           vSphere HA shut down this virtual machine because the host it was running on \
+           was isolated 从 management network.\
+        </description>\
+     </EventLongDescription>\
+     "
+
+VmAutoRenameEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmAuto重命名事件">\
+       <description>\
+          The virtual machine was renamed because of possible name conflicts with another virtual machine\
+       </description>\
+       <cause>\
+            <description>The virtual machine might have been added 到 vCenter Server inventory while \
+               scanning the datastores of hosts added 到 inventory. During such an action, the \
+	       newly-added virtual machine's name might have been found to be in conflict with a virtual \
+               machine name already 在 inventory. To resolve this, vCenter Server renames the \
+	       newly-added virtual machine.\
+            </description>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+VmBeingDeployedEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.VmBeing部署事件">\
+        <description>\
+           A virtual machine is being created from a template\
+        </description>\
+        <cause>\
+             <description>\
+                A user action prompted a virtual machine to be created from this template.\
+             </description>\
+         </cause>\
+     </EventLongDescription>\
+     "
+
+VmBeingHotMigratedEvent.longDescription= "\
+  <EventLongDescription id="vim.事件.VmBeingHot迁移d事件">\
+     <description>\
+        A powered-on virtual machine is being migrated with vMotion\
+     </description>\
+     <cause>\
+          <description> A user action might have caused a powered-on virtual machine to be migrated with vMotion\
+          </description>\
+      </cause>\
+       <cause>\
+          <description> A DRS recommendation might have caused a powered-on virtual machine to be migrated \
+	  with vMotion\
+          </description>\
+      </cause>\
+  </EventLongDescription>\
+  "
+
+DatastoreDiscoveredEvent.longDescription= "\
+  <EventLongDescription id="vim.事件.数据存储Discovered事件">\
+     <description>\
+        A datastore was discovered on a host\
+     </description>\
+     <cause>\
+        <description>\
+           A host 具有 access to this datastore was added 到 datacenter\
+        </description>\
+     </cause>\
+     <cause>\
+        <description>\
+           The storage backing this datastore was unmasked to a host 在 datacenter\
+        </description>\
+     </cause>\
+     <cause>\
+        <description>\
+           A user or system action caused this datastore to be created on a host\
+        </description>\
+     </cause>\
+     <cause>\
+        <description>\
+           A user or system action caused this datastore to be created on a host 和 \
+           the datastore was visible on at least one other host 在 datacenter prior to this \
+           operation. \
+        </description>\
+     </cause>\
+   </EventLongDescription>\
+   "
+
+DatastoreRenamedOnHostEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.数据存储已重命名On主机事件">\
+      <description>\
+         A datastore was renamed on a host managed by vCenter Server\
+      </description>\
+      <cause>\
+         <description>\
+            vCenter Server discovered datastore on a host 和 renamed the datastore \
+            because it already exists 在 vCenter Server inventory under a different name. \
+            vCenter Server might also have renamed the datastore because the name conflicts with \
+	    another datastore 在 same datacenter. \
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+  "
+
+VMFSDatastoreExtendedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VMFS数据存储Extended事件">\
+      <description>\
+         An existing VMFS volume was extended to increase its capacity\
+      </description>\
+      <cause>\
+         <description>\
+            A user or system action caused the datastore to be extended with a partition \
+            on a LUN to increase its capacity. \
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VMFSDatastoreExpandedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VMFS数据存储Expanded事件">\
+      <description>\
+         An existing extent in a VMFS volume was grown to increase its capacity\
+      </description>\
+      <cause>\
+         <description>\
+            A user or system action caused an extent of an existing VMFS datastore  \
+            to be grown. Only extents with free space immediately after them \
+            are expandable. As a result, the action filled the available  \
+            adjacent capacity 在 LUN.\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmConfigMissingEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmConfigMissing事件">\
+      <description>\
+         One or more configuration files 的 virtual machine cannot be found\
+      </description>\
+      <cause>\
+         <description>\
+            The datastore on which this virtual machine resides may be inaccessible\
+         </description>\
+         <action>\
+             Check the connectivity 的 datastore on which this virtual machine \
+             resides. If the datastore has a backing LUN, check to see if there are \
+             any transient disk failures.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmDeployedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm部署事件">\
+      <description>\
+         A virtual machine has been created 从 specified template\
+      </description>\
+      <cause>\
+         <description>\
+            A user action caused a virtual machine to be created 从 template\
+         </description>\
+      </cause>\
+      <cause>\
+         <description>\
+            A scheduled task caused a virtual machine to be created 从 template\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmMacChangedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmMac已更改事件">\
+      <description>\
+         The virtual machine MAC address has changed\
+      </description>\
+      <cause>\
+         <description>\
+            A user action changed the virtual machine MAC address\
+         </description>\
+      </cause>\
+      <cause>\
+         <description>\
+            vCenter changed the virtual machine MAC address because it detected \
+            a MAC address conflict\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmMacConflictEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmMacConflict事件">\
+      <description>\
+         The virtual machine MAC address conflicts with that of \
+         another virtual machine\
+      </description>\
+      <cause>\
+         <description> This virtual machine's MAC address 是 same \
+            as that of another virtual machine.\
+            Refer 到 event details for more information 在 \
+            virtual machine that caused the conflict.\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmOrphanedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmOrphaned事件">\
+      <description>\
+         The virtual machine does not exist 在 host with which it is associated\
+      </description>\
+      <cause>\
+         <description> The virtual machine was deleted while its host was disconnected from vCenter Server. \
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmConnectedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm已连接事件">\
+      <description>\
+         The virtual machine is in a connected state 在 inventory \
+         和 vCenter Server can access it\
+      </description>\
+      <cause>\
+         <description>\
+            A user or system action that resulted in operations 例如 creating, \
+            registering, cloning or deploying a virtual machine gave vCenter Server access to \
+            the virtual machine\
+         </description>\
+      </cause>\
+       <cause>\
+         <description>\
+            A user or system action that resulted in operations 例如 adding or \
+            reconnecting a host gave vCenter Server access 到 virtual machine\
+         </description>\
+      </cause>\
+      <cause>\
+         <description>\
+            The state 的 virtual machine's host changed from \
+            Not Responding to Connected 和 the host gave vCenter Server access 到 virtual machine\
+         </description>\
+      </cause>\
+    </EventLongDescription>\
+    "
+   MigrationErrorEvent.longDescription= "\
+         <EventLongDescription id="vim.事件.迁移错误事件">\
+            <description>\
+               A virtual machine failed to migrate because it did not meet all compatibility criteria\
+            </description>\
+            <cause>\
+                 <description> Migrating a virtual machine 从 source host failed because \
+                     the virtual machine did not meet all the compatibility criteria\
+                 </description>\
+                  <action> \
+                      Use the vSphere Client to check for errors at the time \
+                      的 failure so that you can identify possible reasons for this problem\
+                  </action>\
+             </cause>\
+         </EventLongDescription>\
+         "
+
+ MigrationHostErrorEvent.longDescription= "\
+         <EventLongDescription id="vim.事件.迁移主机错误事件">\
+            <description>\
+               A virtual machine failed to migrate because it did not meet all compatibility criteria\
+            </description>\
+            <cause>\
+                 <description> Migrating a virtual machine 到 destination host or datastore failed \
+                     because the virtual machine did not meet all the compatibility criteria\
+                 </description>\
+                  <action> \
+                      Use the vSphere Client to check for errors at the time \
+                      的 failure so that you can identify possible reasons for this problem\
+                  </action>\
+             </cause>\
+         </EventLongDescription>\
+         "
+
+VmBeingMigratedEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.VmBeing迁移d事件">\
+        <description>\
+           Changing the host on which the virtual machine is executing\
+        </description>\
+        <cause>\
+           <description>\
+                A user action caused the virtual machine to be migrated to a different host\
+           </description>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmMigratedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm迁移d事件">\
+      <description>\
+         The virtual machine's host was changed successfully\
+      </description>\
+      <cause>\
+         <description>\
+            A user action caused the virtual machine \
+            to be successfully migrated to a different host\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmBeingRelocatedEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.VmBeingRelocated事件">\
+        <description>\
+           The virtual machine execution 和/or storage is being relocated\
+        </description>\
+        <cause>\
+           <description>\
+                A user action might have caused the virtual machine's execution 和/or storage to be changed\
+           </description>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmRelocatedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmRelocated事件">\
+      <description>\
+         The virtual machine execution 和/or storage was successfully relocated\
+      </description>\
+      <cause>\
+         <description>\
+            A user action caused the virtual machine's execution \
+            和/or storage to be successfully changed\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmCloneFailedEvent.longDescription= "\
+     <EventLongDescription id="vim.事件.Vm克隆失败事件">\
+        <description>\
+           Cloning a virtual machine failed\
+        </description>\
+        <cause>\
+           <description>\
+                An error prevented the virtual machine from being cloned\
+           </description>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+MigrationHostWarningEvent.longDescription= "\
+         <EventLongDescription id="vim.事件.迁移主机警告事件">\
+            <description>\
+               The virtual machine can be migrated but might lose some functionality after migration \
+	       is complete\
+            </description>\
+            <cause>\
+                 <description> Migrating the virtual machine 到 destination host or datastore is likely to \
+                     succeed but some functionality might not work correctly afterward because the virtual \
+	    	     machine did not meet all the compatibility criteria.\
+                 </description>\
+                  <action> \
+                      Use the vSphere Client to check for warnings at the time \
+                      的 failure so that you can identify possible reasons for this problem\
+                  </action>\
+             </cause>\
+         </EventLongDescription>\
+         "
+
+MigrationResourceErrorEvent.longDescription= "\
+         <EventLongDescription id="vim.事件.迁移资源错误事件">\
+            <description>\
+               A virtual machine failed to migrate due to incompatibilities with target resource pool\
+            </description>\
+            <cause>\
+                 <description>Migrating a virtual machine 到 destination host or datastore 不 \
+                 possible due to incompatibilities 使用 target resource pool.\
+                 </description>\
+                  <action> \
+                      Use the vSphere Client to check for errors at the time \
+                      的 failure so that you can identify possible reasons for this problem\
+                  </action>\
+             </cause>\
+         </EventLongDescription>\
+         "
+
+MigrationResourceWarningEvent.longDescription= "\
+         <EventLongDescription id="vim.事件.迁移资源警告事件">\
+            <description>\
+               The virtual machine can be migrated but might lose some functionality after migration \
+	       is complete\
+            </description>\
+            <cause>\
+                 <description> Migrating the virtual machine 到 destination resource pool is likely to \
+                     succeed but some functionality might not work correctly afterward because the virtual \
+	    	     machine did not meet all the compatibility criteria.\
+                 </description>\
+                  <action> \
+                      Use the vSphere Client to check for warnings at the time \
+                      的 failure so that you can identify possible reasons for this problem\
+                  </action>\
+             </cause>\
+         </EventLongDescription>\
+         "
+
+VmDeployFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm部署失败事件">\
+        <description>\
+           Failed to deploy a virtual machine for reasons described 在 event message\
+        </description>\
+        <cause>\
+           <description>\
+                The virtual machine failed to deploy. \
+                This condition can occur if there 不 enough disk space, the host or virtual machine loses \
+		its network connection, the host is disconnected, 和 so on.\
+           </description>\
+          <action>\
+	    Check the reason 在 event message to find the cause 的 failure 和 correct the problem.\
+         </action>\
+	</cause>\
+     </EventLongDescription>\
+     "
+
+VmDiskFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm磁盘失败事件">\
+        <description>\
+           Failed to create a virtual disk 的 virtual machine for reasons described 在 event message\
+        </description>\
+        <cause>\
+           <description>\
+                A virtual disk was not created 的 virtual machine. This condition can occur if the \
+		operation failed to access the disk, the disk did not have enough space, you do not have \
+		permission 的 operation, 和 so on.\
+           </description>\
+           <action>\
+                Check the reason 在 event message to find the cause 的 failure. Ensure that disk is \
+		accessible, has enough space, 和 that the permission settings allow the operation.\
+           </action>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmFailedMigrateEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm失败迁移事件">\
+        <description>\
+           Failed to migrate the virtual machine for reasons described 在 event message\
+        </description>\
+        <cause> \
+            <description> \
+                The virtual machine did not migrate. This condition can occur if vMotion IPs are not configured, \
+                the source 和 destination hosts are not accessible, 和 so on.\
+            </description> \
+            <action> \
+                Check the reason 在 event message to find the cause 的 failure. Ensure that the \
+		vMotion IPs are configured on source 和 destination hosts, the hosts are accessible, 和 so on.\
+            </action> \
+        </cause> \
+     </EventLongDescription>\
+     "
+
+VmFailedRelayoutOnVmfs2DatastoreEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm失败RelayoutOnVmfs2数据存储事件">\
+        <description>\
+           Failed to migrate a virtual machine on VMFS2 datastore\
+        </description>\
+        <cause>\
+           <description>\
+                An attempt to migrate a virtual machine failed because the \
+                virtual machine still has disk(s) on a VMFS2 datastore. VMFS2 datastores are read-only for \
+                ESX 3.0 和 later hosts.\
+           </description>\
+           <action> \
+                Upgrade the datastore(s) from VMFS2 to VMFS3\
+           </action> \
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmFailedRelayoutEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm失败Relayout事件">\
+        <description>\
+           Failed to lay out a virtual machine \
+        </description>\
+        <cause>\
+           <description>\
+                An attempt to lay out a virtual machine on disk failed for reasons described 在 event message. \
+                This condition can occur for any of several reasons, 例如 inability to access the disk.\
+           </description>\
+        <action>\
+	    Check the reason 在 event message to find the cause 的 failure 和 correct the problem.\
+         </action>\
+	</cause>\
+     </EventLongDescription>\
+     "
+
+VmAcquiredMksTicketEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm获取dMksTicket事件">\
+        <description>\
+           Successfully acquired MKS Ticket 的 virtual machine\
+        </description>\
+        <cause>\
+           <description>\
+                The MKS Ticket used to connect 到 virtual machine remote console \
+                has been successfully acquired.\
+           </description>\
+        </cause>\
+     </EventLongDescription>\
+     "
+
+VmWwnAssignedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmWwn已分配事件">\
+      <description>\
+         The virtual machine was assigned a WWN (World Wide Name)\
+      </description>\
+      <cause>\
+         <description>The virtual machine was assigned a WWN because it \
+            was created with an RDM (Raw Device Mappings) disk or was \
+            reconfigured to access an RDM disk\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmWwnChangedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmWwn已更改事件">\
+      <description>\
+         The WWN (World Wide Name) assigned 到 virtual machine was changed \
+      </description>\
+      <cause>\
+         <description>The virtual machine was assigned a new WWN, possibly due \
+         to a conflict caused 由nother virtual machine being \
+         assigned the same WWN\
+         </description>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+VmWwnConflictEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.VmWwnConflict事件">\
+      <description>\
+         The WWN (World Wide Name) assigned 到 virtual machine has a \
+         conflict \
+      </description>\
+      <cause>\
+         <description>The WWN assigned to this virtual machine was the same \
+            as that of a different virtual machine.\
+       </description>\
+      <action>\
+	    Check the event details for more information 在 conflict 和 correct the problem.\
+         </action>\</cause>\
+   </EventLongDescription>\
+   "
+
+VmReloadFromPathFailedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.Vm重新加载FromPath失败事件">\
+      <description>\
+         Reloading the virtual machine from a new datastore path failed \
+      </description>\
+      <cause>\
+         <description>The destination datastore path was inaccessible or \
+         invalid\
+         </description>\
+         <action>Use a valid destination datastore path \
+         </action> \
+      </cause>\
+      <cause>\
+         <description>The virtual machine is in an invalid state \
+         </description>\
+         <action>Check the virtual machine state power state. If the virtual machine is \
+            powered on, power it off \
+         </action>\
+      </cause>\
+      <cause>\
+         <description>The virtual machine is enabled for Fault Tolerance\
+         </description>\
+         <action>Disable Fault Tolerance 的 virtual \
+            machine 和 retry the operation \
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+CustomizationLinuxIdentityFailed.longDescription= "\
+   <EventLongDescription id="vim.事件.CustomizationLinuxIDEntity失败">\
+      <description>\
+         The guest operating system Linux distribution 不 supported by the customization scripts. \
+         Please refer 到 VMware vSphere Compatibility Matrix 的 list 的 supported Linux \
+         distributions.\
+      </description>\
+      <cause>\
+         <description>\
+            Customization 的 target guest operating system Linux distribution 不 supported.\
+         </description>\
+         <action>\
+            Consult with VMware on when the specific Linux distribution will \
+            be supported. If the Linux distribution is already supported in a newer release, consider upgrading.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+CustomizationNetworkSetupFailed.longDescription= "\
+   <EventLongDescription id="vim.事件.Customization网络设置up失败">\
+      <description>\
+         The customization scripts failed to set the parameters \
+         在 corresponding configuration files for Linux or 在 \
+         Windows registry\
+      </description>\
+      <cause>\
+         <description>\
+            The Customization Specification contains an invalid host name or domain name\
+         </description>\
+         <action>\
+            Review the guest operating system log files for this event for more details\
+         </action>\
+         <action>\
+            Provide a valid host name 的 target guest operating system. The name must comply \
+            使用 host name 和 domain name definitions in RFC 952, 1035, 1123, 2181.\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            Could not find a NIC 使用 MAC address specified 在 Customization Package \
+         </description>\
+         <action>\
+            Review the guest operating system log files for this event for more details\
+         </action>\
+         <action>\
+            Confirm that there was no change 在 virtual NIC MAC address 介于 \
+            the creation 的 Customization Package 和 its deployment. Deployment occurs \
+            during the first boot 的 virtual machine after customization has been scheduled.\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            The customization code needs read/write permissions for certain configuration files. \
+	    These permissions were not granted 到 'root' account on Linux \
+            or 到 account used by the VMware Tools Service 在 Windows guest operating system.\
+         </description>\
+         <action>\
+            Review the guest operating system log files for this event for more details\
+         </action>\
+         <action>\
+            Grant read/write permissions 到 'root' account for Linux or 到 \
+            account used by the VMware Tools Service 在 Windows guest operating system \
+            和 the registry keys that need to be modified by the customization code\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+CustomizationSysprepFailed.longDescription= "\
+   <EventLongDescription id="vim.事件.CustomizationSysprep失败">\
+      <description>\
+         The sysprep files 在 folder corresponding 到 \
+         selected target guest operating system are not compatible 使用 \
+         actual version 的 guest operation system\
+      </description>\
+      <cause>\
+         <description>\
+            The sysprep files 在 folder corresponding 到 target guest operating system \
+	    (例如 Windows XP) are for a different guest operating system (例如 Windows 2003)\
+         </description>\
+         <action>\
+            On the machine running vCenter Server, place the correct sysprep files 在 folder \
+	    corresponding 到 target guest operating system\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            The sysprep files 在 folder corresponding 到 guest operating system are for a \
+            different Service Pack, 例如 the guest operating system is Windows XP SP2 和 but the \
+            sysprep files are for Windows XP SP1.\
+         </description>\
+         <action>\
+            On the machine running vCenter Server, place the correct sysprep files 在 folder \
+	    corresponding 到 target guest operating system\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+
+CustomizationUnknownFailure.longDescription= "\
+   <EventLongDescription id="vim.事件.CustomizationUnknownFailure">\
+      <description>\
+         The customization component failed to set the required parameters \
+         inside the guest operating system\
+      </description>\
+      <cause>\
+         <description>\
+            On Windows, the user account under which the customization code runs has no \
+	    read/write permissions 的 registry keys used by the customization code. \
+	    Customization code is usually \
+            run under the 'Local System' account but you can change this by \
+            selecting a different account for VMware Tools Service execution.\
+         </description>\
+         <action>\
+            Review the guest operating system log files for this event for more details\
+         </action>\
+         <action>\
+            Determine which user account is selected for VMware Tools Service execution 和 \
+            confirm that this account has read/write permissions on registry keys \
+            used by the customization code\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            On Windows, the user account under which the customization code runs has no read/write \
+	    permissions 的 files 和 folders used by the customization code. \
+            Customization code is usually run \
+            under the 'Local System' account but you can change this by selecting a \
+            different account for VMware Tools Service execution.\
+         </description>\
+         <action>\
+            Review the guest operating system log files for this event for more details\
+         </action>\
+         <action>\
+            Determine which user account is selected for VMware Tools Service execution 和 \
+            confirm that this account has read/write permissions 在 files 和 folders \
+            used by the customization code\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            On Linux, an invalid or unsupported time zone is passed 到 customization \
+            scripts 和 the time zone configuration failed as a result\
+         </description>\
+         <action>\
+            Review the guest operating system log files for this event for more details\
+         </action>\
+         <action>\
+            Confirm that a supported time zone is passed in Customization Specification.\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            On Linux, the guest operating system 'root' account does not have read/write \
+	    permissions 的 configuration files that the customization scripts need to modify \
+	    ('/etc/hosts')\
+         </description>\
+         <action>\
+            Grant read/write permissions 的 configuration files 到 guest operating system 'root' \
+	    account\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            To enable guest customization on Linux, in case open-vm-tools are used, you must also install the  \
+            deployPkg plug-in.\
+         </description>\
+         <action>\
+            Follow kb.vmware.com/kb/2075048 to install the open-vm-tools deployPkg plug-in.\
+         </action>\
+      </cause>\
+      <cause>\
+         <description>\
+            Customization 的 target guest operating system 不 supported\
+         </description>\
+         <action>\
+            Consult with VMware on when the specific Linux distribution will \
+            be supported. If the Linux distribution is already supported in a newer release, consider upgrading.\
+         </action>\
+      </cause>\
+   </EventLongDescription>\
+   "
+#
+# FT Related Events
+#
+
+VmFailedStartingSecondaryEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm失败StartingSecondary事件">\
+       <description>\
+          vCenter Server could not start the Secondary VM because of an error\
+       </description>\
+       <cause>\
+            <description>\
+              The remote host is incompatible for Secondary VM. \
+              For instance, this condition can occur when the host does not have access 到 \
+              virtual machine's network or datastore.\
+            </description>\
+            <action>Ensure that the hosts 在 cluster are compatible for FT</action>\
+        </cause>\
+        <cause>\
+            <description>Login to a remote host failed. If the host has been newly added 到 inventory \
+		or just rebooted, it might take some time for SSL thumbprints to be propagated 到 hosts.\
+            </description>\
+            <action>If the problem persists, disconnect 和 re-connect the host.</action>\
+        </cause>\
+        <cause>\
+            <description>Registration 的 Secondary VM 在 remote host failed</description>\
+            <action>Determine whether the remote host has access 到 datastore that the FT \
+		virtual machine resides on</action>\
+        </cause>\
+        <cause>\
+            <description>An error occurred while starting the Secondary VM</description>\
+            <action>Determine the cause 的 migration error. vCenter Server will try to restart the \
+		Secondary VM if it can.</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+VmFailedUpdatingSecondaryConfig.longDescription= "\
+    <EventLongDescription id="vim.事件.Vm失败正在更新SecondaryConfig">\
+       <description>\
+          After a failover, the new Primary VM failed to update the configuration 的 Secondary VM\
+       </description>\
+       <cause>\
+            <description> </description>\
+            <action></action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+VmFaultToleranceStateChangedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmFaultTolerance状态已更改事件">\
+       <description>\
+          The Fault Tolerance state 的 virtual machine changed\
+       </description>\
+       <cause>\
+            <description> </description>\
+            <action></action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+VmFaultToleranceTurnedOffEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmFaultToleranceTurnedOff事件">\
+       <description>\
+          All Secondary VMs have been removed 和 Fault Tolerance protection \
+	  is turned off for this virtual machine.\
+       </description>\
+       <cause>\
+            <description> </description>\
+            <action></action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+
+VmFaultToleranceVmTerminatedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmFaultToleranceVmTerminated事件">\
+       <description>\
+          A Primary VM or Secondary VM became inactive\
+       </description>\
+       <cause>\
+            <description> The Secondary VM became inactive because its operations are no longer \
+		synchronized with those 的 Primary VM</description>\
+            <action>vSphere HA will attempt to restart the Secondary VM</action>\
+        </cause>\
+       <cause>\
+            <description> The Secondary VM became inactive because a hardware or network failure \
+		caused the Primary VM to lose the Primary-to-Secondary connection</description>\
+            <action>vSphere HA will attempt to restart the Secondary VM</action>\
+        </cause>\
+       <cause>\
+            <description> The Fault Tolerant VM became inactive due to a partial hardware failure on \
+		the physical host</description>\
+            <action>vSphere HA will attempt to restart the Secondary VM</action>\
+        </cause>\
+       <cause>\
+            <description> A user stopped the Fault Tolerant VM</description>\
+            <action>The remaining Fault Tolerant VM takes over as the Primary VM. vSphere HA \
+		will attempt to restart the Secondary VM.</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+
+VmMaxFTRestartCountReached.longDescription= "\
+    <EventLongDescription id="vim.事件.VmMaxFT重新启动计数Reached">\
+       <description>\
+          The system reached the maximum restart limit in its attempt to restart a Secondary VM\
+       </description>\
+       <cause>\
+            <description>The system exceeded the number of allowed restart attempts 的 Secondary VM \
+		when it tried to reestablish Fault Tolerance</description>\
+            <action>Check the causes 的 restart failures 和 fix them. Then disable 和 re-enable Fault \
+		Tolerance protection.</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+VmNoCompatibleHostForSecondaryEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmNoCompatible主机ForSecondary事件">\
+       <description>\
+          No compatible host was found when trying to place a Secondary VM\
+       </description>\
+       <cause>\
+            <description>There was no compatible host available to place a Secondary VM</description>\
+            <action>Resolve the incompatibilities 和 retry the operation</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+VmSecondaryDisabledBySystemEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmSecondary已禁用BySystem事件">\
+       <description>\
+          vCenter Server disabled a Secondary VM because it could not power 在 Secondary VM\
+       </description>\
+       <cause>\
+            <description>vCenter Server failed to power 在 Secondary VM </description>\
+            <action>Check the reason 在 event message for more details, fix the failure, 和 \
+		re-enable Fault Tolerance protection to power 在 Secondary VM.</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+
+VmTimedoutStartingSecondaryEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.VmTimedoutStartingSecondary事件">\
+       <description> An attempt to start a Secondary VM timed out.\
+       </description>\
+       <cause>\
+            <description>A user attempted to turn on or enable Fault Tolerance, triggering the start of \
+		the Secondary VM. The start operation timed out 和, as a result, vCenter Server disables \
+		Fault Tolerance. </description>\
+            <action>Fix any problems 和 re-enable Fault Tolerance protection</action>\
+        </cause>\
+       <cause>\
+            <description>The secondary VM was started in response to a failure, but the start attempt \
+		timed out</description>\
+            <action> vSphere HA will attempt to power 在 Secondary VM</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+CanceledHostOperationEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.已取消主机Operation事件">\
+		<description>\
+			An operation performed 在 host was canceled\
+		</description>\
+		<cause>\
+			<description>\
+		A previous event 在 sequence of events will provide more information about the \
+		cause of this cancellation\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+ChangeOwnerOfFileFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.更改OwnerOfFile失败事件">\
+		<description>\
+			Changing the owner of a file or folder failed\
+		</description>\
+	</EventLongDescription>\
+    "
+
+HostAddFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机添加失败事件">\
+		<description>\
+			Adding a host failed\
+		</description>\
+	</EventLongDescription>\
+    "
+
+HostAdminDisableEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Admin禁用事件">\
+		<description>\
+			Host permissions have been changed so that only the account used for \
+			vCenter Server operations has Administrator permissions\
+		</description>\
+		<cause>\
+			<description>\
+				This condition occurs when vCenter Server removes all other Administrator \
+				access 到 host because the host has been placed in Lockdown Mode. \
+				The host can be managed by vCenter Server only 和 \
+				Only vCenter Server can re-enable Administrator access for other accounts.\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostAdminEnableEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Admin启用事件">\
+		<description>\
+			vCenter Server has restored Administrator permissions for host user accounts \
+			 whose permissions were disabled by Lockdown Mode\
+		</description>\
+		<cause>\
+			<description>\
+				This condition occurs when vCenter Server restores Administrator access to \
+				host user accounts that lost their Administrator permissions when the host was \
+				placed in Lockdown Mode\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedAccountFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败Ac计数失败事件">\
+		<description>\
+			Could not connect 到 host because setting up a management account failed\
+		</description>\
+		<cause>\
+			<description>\
+			The account used by vCenter Server to manage the host could not be configured\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedAlreadyManagedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败AlreadyManaged事件">\
+		<description>\
+			Could not connect 到 host because it is already being managed 由 \
+			different vCenter Server instance.\
+		</description>\
+		<cause>\
+			<description>\
+				The host is already being managed 由 different vCenter Server instance\
+			</description>\
+			<action>\
+				Remove the host 从 inventory 的 other vCenter Server instance\
+			</action>\
+			<action>\
+				Force the addition 的 host 到 current vCenter Server instance\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedBadCcagentEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败BadCc代理事件">\
+		<description>\
+			Could not connect 到 host because the host agent did not respond\
+		</description>\
+		<cause>\
+			<description>\
+				No response was received 从 host agent\
+			</description>\
+			<action>\
+				Restart the host agent 在 ESX/ESXi host\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedBadUsernameEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败Bad用户名称事件">\
+		<description>\
+			Could not connect 到 host due to an invalid username 和 password combination\
+		</description>\
+		<cause>\
+			<description>\
+				Invalid username 和 password combination\
+			</description>\
+			<action>\
+				Use the correct username 和 password\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedBadVersionEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败Bad版本事件">\
+		<description>\
+			Could not connect 到 host due to an incompatible vSphere Client version\
+		</description>\
+		<cause>\
+			<description>\
+			The version 的 vSphere Client is incompatible 使用 ESX/ESXi host so \
+			the connection attempt failed\
+			</description>\
+			<action>\
+			Download 和 use a compatible vSphere Client version to connect 到 host\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedCcagentUpgradeEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败Cc代理升级事件">\
+		<description>\
+			Could not connect 到 host because a host agent upgrade or \
+			installation is in process\
+		</description>\
+		<cause>\
+			<description>\
+				The host agent is being upgraded or installed 在 host\
+			</description>\
+			<action>\
+				Wait 的 host agent upgrade or installation to complete\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败事件">\
+		<description>\
+			Could not connect 到 host due to an unspecified condition\
+		</description>\
+		<cause>\
+			<description>\
+				Unknown cause of failure\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedNetworkErrorEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败网络错误事件">\
+		<description>\
+			Could not connect 到 host due to a network error\
+		</description>\
+		<cause>\
+			<description>\
+				A Network error occurred while connecting 到 host\
+			</description>\
+			<action>\
+				Verify that host networking is configured correctly\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedNoAccessEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败NoAccess事件">\
+		<description>\
+			Could not connect 到 host due to insufficient account privileges\
+		</description>\
+		<cause>\
+			<description>\
+				The account used to connect to host does not have host access privileges\
+			</description>\
+			<action>\
+				Use an account 具有 sufficient privileges to connect 到 host\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedNoConnectionEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败No连接ion事件">\
+		<description>\
+			Could not connect 到 host because the host 不 在 network\
+		</description>\
+		<cause>\
+			<description>\
+				The host that you are attempting to connect to 不 present 在 network\
+			</description>\
+			<action>\
+				Verify that host networking is configured correctly 和 the host is connected \
+				到 same network as vCenter Server\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedNoLicenseEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败No许可证事件">\
+		<description>\
+			Could not connect 到 host due to a licensing issue\
+		</description>\
+		<cause>\
+			<description>\
+				There are not enough licenses to add the host 到 vCenter Server inventory. \
+				This event is accompanied 由 fault that specifies the missing licenses \
+				required to add the host successfully.\
+			</description>\
+			<action>\
+				Add the necessary licenses to vCenter Server 和 try adding the host again\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedNotFoundEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败NotFound事件">\
+		<description>\
+			Could not connect 到 host because vCenter Server could not resolve the host name\
+		</description>\
+		<cause>\
+			<description>\
+				Unable to resolve the host name 的 host\
+			</description>\
+			<action>\
+				Verify that the correct host name has been supplied 的 host\
+			</action>\
+			<action>\
+				Configure the host to use a known-good (resolvable) host name\
+			</action>\
+			<action>\
+				Add the host name 到 DNS server\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostCnxFailedTimeoutEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Cnx失败超时事件">\
+		<description>\
+			Could not connect 到 host because the connection attempt timed out\
+		</description>\
+		<cause>\
+			<description>\
+				A timeout occurred while attempting to connect 到 host\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostConnectionLostEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机连接ionLost事件">\
+		<description>\
+			Connection 到 host has been lost\
+		</description>\
+		<cause>\
+			<description>\
+				The host 不 in a state where it can respond\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+HostReconnectionFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机Re连接ion失败事件">\
+		<description>\
+			Could not reestablish a connection 到 host\
+		</description>\
+		<cause>\
+			<description>\
+				The host 不 in a state where it can respond\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+TimedOutHostOperationEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.TimedOut主机Operation事件">\
+		<description>\
+			An operation performed 在 host has timed out\
+		</description>\
+		<cause>\
+			<description>\
+			A previous event 在 sequence of events will provide information 在 \
+			reason 的 timeout\
+			</description>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+AccountCreatedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Ac计数已创建事件">\
+		<description>\
+			An account has been created 在 host\
+		</description>\
+	</EventLongDescription>\
+    "
+
+AccountRemovedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Ac计数已移除事件">\
+		<description>\
+			An account has been removed 从 host\
+		</description>\
+	</EventLongDescription>\
+    "
+
+AccountUpdatedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Ac计数已更新事件">\
+		<description>\
+			An account has been updated 在 host\
+		</description>\
+	</EventLongDescription>\
+    "
+
+AdminPasswordNotChangedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Admin密码Not已更改事件">\
+		<description>\
+			The default password 的 Administrator user 在 host has not been changed\
+		</description>\
+		<cause>\
+			<description>\
+			You have not changed the password 的 Administrator user 在 host so the \
+			default password is still active\
+			</description>\
+			<action>\
+				Change the password 的 Administrator user 在 host\
+			</action>\
+		</cause>\
+	</EventLongDescription>\
+    "
+
+BadUsernameSessionEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Bad用户名称Session事件">\
+		<description>\
+			A user attempted to log in with an unknown or invalid username\
+		</description>\
+		<cause>\
+            <description>\
+			The username is unknown 到 system\
+			</description>\
+            <action>\
+			Use a username —— included 在 system user directory\
+			</action>\
+            <action>\
+			On Linux, verify that the user directory is correctly configured\
+			</action>\
+            <action>\
+			If you are 使用 Active Directory, check the health 的 domain controller\
+			</action>\
+        </cause>\
+        <cause>\
+            <description>\
+			The user provided an invalid password\
+			</description>\
+            <action>\
+			Supply the correct password\
+			</action>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+ErrorUpgradeEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.错误升级事件">\
+		<description>\
+			An error occurred during agent upgrade\
+		</description>\
+	</EventLongDescription>\
+    "
+
+GeneralHostErrorEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.General主机错误事件">\
+		<description>\
+			An error occurred 在 host\
+		</description>\
+		<cause>\
+            <description>\
+			The agent cannot send heartbeats because of a networking related failure on host\
+			</description>\
+        </cause>\
+        <cause>\
+            <description>\
+			The agent failed to update the configuration file on host\
+			</description>\
+        </cause>\
+        <cause>\
+            <description>\
+			The agent failed to save the configuration file to disk on host\
+			</description>\
+        </cause>\
+        <cause>\
+            <description>\
+			The provisioning module failed to load. As a result, all provisioning operations will \
+			fail on host.\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+GeneralHostInfoEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.General主机Info事件">\
+		<description>\
+			A general information event occurred 在 host\
+		</description>\
+	</EventLongDescription>\
+    "
+
+GeneralHostWarningEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.General主机警告事件">\
+		<description>\
+			A general warning event occurred 在 host\
+		</description>\
+		<cause>\
+            <description>\
+			Virtual machine creation might fail because the agent was unable to retrieve virtual \
+			machine creation options 从 host\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+GeneralUserEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.General用户事件">\
+		<description>\
+			A general user event occurred 在 host\
+		</description>\
+		<cause>\
+            <description>\
+			A user initiated an action 在 host\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+GeneralVmErrorEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.GeneralVm错误事件">\
+		<description>\
+			An error occurred 在 virtual machine\
+		</description>\
+	</EventLongDescription>\
+    "
+
+GeneralVmInfoEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.GeneralVmInfo事件">\
+		<description>\
+			A general information event occurred 在 virtual machine\
+		</description>\
+	</EventLongDescription>\
+    "
+
+GeneralVmWarningEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.GeneralVm警告事件">\
+		<description>\
+			A general warning event occurred 在 virtual machine\
+		</description>\
+	</EventLongDescription>\
+    "
+
+HostSyncFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机同步失败事件">\
+		<description>\
+			Failed to sync 使用 vCenter Agent 在 host\
+		</description>\
+		<cause>\
+            <description>\
+				The event contains details on why this failure occurred\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+HostUpgradeFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.主机升级失败事件">\
+		<description>\
+			Failed to connect 到 host due to an installation or upgrade issue\
+		</description>\
+	</EventLongDescription>\
+    "
+
+NoAccessUserEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.NoAccess用户事件">\
+		<description>\
+			A user could not log in due to insufficient access permission\
+		</description>\
+		<cause>\
+            <description>\
+			The user account has insufficient access permission\
+			</description>\
+			<action>\
+			Log in with a user account 具有 the necessary access permissions or grant \
+			additional access permissions 到 current user\
+			</action>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+SessionTerminatedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.SessionTerminated事件">\
+		<description>\
+			A session has been terminated\
+		</description>\
+	</EventLongDescription>\
+    "
+
+TaskTimeoutEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.任务超时事件">\
+		<description>\
+			A task has been cleaned up because it timed out\
+		</description>\
+	</EventLongDescription>\
+    "
+
+UserUpgradeEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.用户升级事件">\
+		<description>\
+			A general user event occurred due to an upgrade\
+		</description>\
+	</EventLongDescription>\
+    "
+
+VcAgentUninstalledEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Vc代理已卸载事件">\
+		<description>\
+			The vCenter Agent has been uninstalled from host\
+		</description>\
+	</EventLongDescription>\
+    "
+
+VcAgentUninstallFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Vc代理卸载失败事件">\
+		<description>\
+			An attempt to uninstall the vCenter Agent failed 在 host\
+		</description>\
+		<cause>\
+            <description>\
+				The event contains details on why this failure occurred\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+VcAgentUpgradedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Vc代理已升级事件">\
+		<description>\
+			The vCenter Agent has been upgraded 在 host\
+		</description>\
+	</EventLongDescription>\
+    "
+
+VcAgentUpgradeFailedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.Vc代理升级失败事件">\
+		<description>\
+			A vCenter Agent upgrade attempt failed 在 host\
+		</description>\
+		<cause>\
+            <description>\
+				The event contains details on why this failure occurred\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+VimAccountPasswordChangedEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.VimAc计数密码已更改事件">\
+		<description>\
+			The password 的 Vim account user 在 host has been changed. \
+			This account is created by vCenter Server 和 used to manage the host.\
+		</description>\
+		<cause>\
+            <description>\
+			vCenter Server periodically changes the password 的 Vim account that it \
+			uses to manage the host\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+VmMessageErrorEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.VmMessage错误事件">\
+		<description>\
+			An error message listing a collection of observations has been reported by the virtual machine\
+		</description>\
+		<cause>\
+            <description>\
+				The event contains details on why this error occurred\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+VmMessageEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.VmMessage事件">\
+		<description>\
+			An information message listing a collection of observations has been reported by the virtual machine\
+		</description>\
+		<cause>\
+            <description>\
+				The event contains details 在 messages 从 virtual machine\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+VmMessageWarningEvent.longDescription= "\
+	<EventLongDescription id="vim.事件.VmMessage警告事件">\
+		<description>\
+			A warning message listing a collection of observations has been reported by the virtual machine\
+		</description>\
+		<cause>\
+            <description>\
+				The event contains details on why this warning was issued\
+			</description>\
+        </cause>\
+	</EventLongDescription>\
+    "
+
+DvsHostWentOutOfSyncEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Dvs主机WentOutOf同步事件">\
+       <description> The vSphere Distributed Switch configuration 在 host differed from that 的 vCenter Server\
+       </description>\
+       <cause>\
+         <description> The host was not connected 到 vCenter Server when updates were sent </description>\
+       </cause>\
+       <cause>\
+         <description> vCenter Server failed to push the vSphere Distributed Switch configuration 到 host 在 past</description>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+GhostDvsProxySwitchDetectedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.G主机DvsProxySwitchDetected事件">\
+       <description> \
+          vCenter Server found a vSphere Distributed Switch proxy switch 在 host that does not match any \
+          vSphere Distributed Switch in vCenter Server \
+       </description>\
+       <cause>\
+            <description> \
+               The vSphere Distributed Switch corresponding 到 vSphere Distributed Switch proxy switch \
+               在 host was deleted while host was disconnected 从 vCenter Server\
+            </description>\
+        </cause>\
+       <cause>\
+            <description> \
+               The host is no longer a member 的 vSphere Distributed Switch that the proxy switch 在 host \
+               corresponds to \
+            </description>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+IncorrectHostInformationEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Incorrect主机信息事件">\
+       <description> The host did not provide the information needed to acquire the correct set of licenses </description>\
+       <cause>\
+            <description> The cpuCores, cpuPackages or hostType information 在 host 不 valid </description>\
+        </cause>\
+       <cause>\
+            <description> The host information 不 available because host was added as disconnected </description>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostWwnConflictEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机WwnConflict事件">\
+       <description> \
+          The WWN (World Wide Name) of this host conflicts 使用 WWN of another host or virtual machine\
+       </description>\
+       <cause>\
+            <description> The WWN of this host conflicts with WWN of another host </description>\
+       </cause>\
+       <cause>\
+            <description> The WWN of this host conflicts with WWN of another virtual machine</description>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostIpChangedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Ip已更改事件">\
+       <description> \
+          The IP address 的 host was changed\
+       </description>\
+       <cause>\
+            <description> The IP address 的 host was changed 到 vCenter Server </description>\
+       </cause>\
+       <cause>\
+            <description> The IP address 的 host was changed 到 the host </description>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+DrsExitStandbyModeFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.DRSExitStandbyMode失败事件">\
+       <description>\
+          DPM failed to power on a host in standby mode. \
+		  DPM tried to power on a host 使用 IPMI, iLO or Wake-on-LAN protocol, but the host \
+		  did not power on.\
+       </description>\
+       <cause>\
+            <description>DPM could not communicate 使用 BMC 在 host</description>\
+            <action>Verify the IPMI/iLO credentials entered in vCenter Server</action>\
+            <action>Verify that LAN access is enabled 在 BMC</action>\
+        </cause>\
+        <cause>\
+            <description>The vMotion NIC 在 host does not support Wake-on-LAN</description>\
+            <action>Select a vMotion NIC that supports Wake-on-LAN</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+ClusterOvercommittedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.集群Overcommitted事件">\
+       <description>\
+          The cumulative CPU 和/or memory resources of all hosts 在 cluster \
+          are not adequate to satisfy the resource reservations of all virtual machines 在 \
+          cluster\
+       </description>\
+       <cause>\
+            <description>You attempted to power on a virtual machine bypassing vCenter Server. \
+		This condition occurs when you attempt the power on 使用 the vSphere Client directly \
+		connected 到 host.</description>\
+            <action>In a DRS cluster, do not power on virtual machines bypassing vCenter Server</action>\
+        </cause>\
+        <cause>\
+            <description>A host was placed in Maintenance, Standby, or Disconnected Mode</description>\
+            <action>Bring any host in Maintenance, Standby, or Disconnected mode out 的se modes</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+ResourceViolatedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.资源Violated事件">\
+       <description>\
+          The cumulative CPU 和/or memory resource consumption of all virtual machines 在 \
+          resource pool exceeds the resource pool configuration \
+       </description>\
+       <cause>\
+            <description>You attempted to move a virtual machine from one resource pool into another \
+		bypassing vCenter Server. This condition occurs when you attempt the move 使用 \
+		the vSphere Client directly connected 到 host.\
+		</description>\
+            <action>In a DRS cluster, do not move 和 power on a virtual machine bypassing vCenter Server</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostComplianceCheckedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.主机合规性Checked事件">\
+      <description>\
+         The host was checked for compliance with a host profile\
+      </description>\
+      <cause>\
+         <description>\
+            The user initiated a compliance check 在 host against a host profile \
+          </description>\
+      </cause>\
+      <cause>\
+         <description>\
+            A scheduled task initiated a compliance check for \
+            the host against a host profile \
+         </description>\
+      </cause>\
+    </EventLongDescription>\
+    "
+
+ClusterComplianceCheckedEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.集群合规性Checked事件">\
+      <description>\
+         The cluster was checked for compliance with a cluster profile\
+      </description>\
+      <cause>\
+         <description>\
+            The user initiated a compliance check 在 cluster against a cluster profile \
+         </description>\
+      </cause>\
+      <cause>\
+         <description>\
+            A scheduled has initiated a compliance check for \
+            the cluster against a cluster profile \
+         </description>\
+      </cause>\
+    </EventLongDescription>\
+    "
+
+HostNonCompliantEvent.longDescription= "\
+   <EventLongDescription id="vim.事件.主机NonCompliant事件">\
+      <description>\
+         The host does not comply 使用 host profile\
+       </description>\
+       <cause>\
+          <description>\
+             The host 不 in compliance 使用 attached profile \
+          </description>\
+       <action>\
+          Check the Summary tab 的 host 在 vSphere Client to determine the \
+          possible cause(s) of noncompliance \
+       </action>\
+       </cause>\
+</EventLongDescription>\
+   "
+
+ClusterReconfiguredEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.集群已重新配置事件">\
+       <description>\
+          The cluster configuration was changed. The cluster configuration includes \
+          information about the DRS, DPM, EVC 和 vSphere HA settings 的 cluster. All DRS \
+          rules are also stored 在 cluster configuration. Editing the cluster \
+          configuration may trigger an invocation of DRS 和/or enabling/disabling \
+          of vSphere HA on each host 在 cluster. \
+       </description>\
+    </EventLongDescription>\
+    "
+
+ClusterStatusChangedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.集群状态已更改事件">\
+       <description>\
+          The cluster status has changed. This status 是 status 的 root resource \
+          pool that encompasses the entire cluster. A cluster status change may be \
+          accompanied by the removal of a configuration issue if one was previously detected. \
+          A cluster status of green indicates that everything is fine. A yellow status \
+          indicates that the root resource pool does not have the resources to meet the \
+          reservations of its children. A red status means that a node 在 resource \
+          pool has children whose reservations exceed the configuration 的 node. \
+       </description>\
+       <cause>\
+            <description>The cluster status changed to yellow</description>\
+            <action>Add more resources (more hosts), or reduce the reservation 的 \
+            resource pools directly under the root to match the new capacity</action>\
+        </cause>\
+        <cause>\
+            <description>The cluster status changed to red</description>\
+            <action>Change the resource settings 在 resource pools —— red so \
+            that they can accommodate their child virtual machines. If this 不 possible, lower \
+            the virtual machine reservations. If this 不 possible either, power off some \
+	    virtual machines.</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+DrsInvocationFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.DRSInvocation失败事件">\
+       <description>\
+          A DRS invocation failed to complete successfully. This condition can occur for a \
+		  variety of reasons, some of which may be transient. \
+       </description>\
+       <cause>\
+            <description>An error was encountered during a DRS invocation</description>\
+            <action>Disable 和 re-enable DRS</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+DrsResourceConfigureFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.DRS资源配置失败事件">\
+       <description>\
+          The DRS resource settings could not be successfully applied to a host 在 \
+		  cluster. This condition is typically transient. \
+       </description>\
+       <cause>\
+            <description>DRS resource settings could not be applied to a host.</description>\
+            <action>DRS generates resource settings that map the cluster values 到 \
+            host. However, in this case, the values could not be successfully applied \
+            到 host. This is typically a transient error caused by delayed synchronization \
+            from DRS 到 host. If this condition persists, enable debug logging in vpxa 和 \
+	    contact VMware Support. </action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+DrsVmMigratedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.DRSVm迁移d事件">\
+       <description>\
+          A virtual machine was migrated 基于 a DRS recommendation. The recommendation might \
+		  have been made be to achieve better load balancing 在 cluster or to evacuate \
+		  a host 在 cluster —— being put into Standby or Maintenance Mode. \
+       </description>\
+       <cause>\
+            <description>DRS recommended the migration of a virtual machine</description>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+DrsVmPoweredOnEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.DRSVm电源edOn事件">\
+       <description>\
+          A virtual machine was powered on by the user 和 DRS choose a host 的 virtual machine 基于 \
+	  the current cluster load distribution combined 使用 virtual machine's resource requirements \
+       </description>\
+       <cause>\
+            <description>DRS chose a host for a virtual machine that was being powered on</description>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostOvercommittedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Overcommitted事件">\
+       <description>\
+          A host does not have sufficient CPU 和/or memory capacity to \
+		  satisfy its resource configuration. The host has its own admission control, so this \
+		  condition should never occur.\
+       </description>\
+       <cause>\
+            <description>A host has insufficient capacity for its resource configuration</description>\
+            <action>If you encounter this condition, contact VMware Support </action>\
+	</cause>\
+    </EventLongDescription>\
+    "
+
+HostStatusChangedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机状态已更改事件">\
+       <description>\
+          The host status has changed. This status 是 status 的 root resource \
+          pool that encompasses the entire host. A host status change may be \
+          accompanied by the removal of a configuration issue if one was previously detected. \
+          A host status of green indicates that everything is fine. A yellow status \
+          indicates that the root resource pool does not have the resources to meet the \
+          reservations of its children. A red status means that a node 在 resource \
+          pool has children whose reservations exceed the configuration 的 node. \
+       </description>\
+       <cause>\
+            <description>The host status changed to yellow</description>\
+            <action>Reduce the reservation 的 resource pools directly under the \
+            root to match the new capacity</action>\
+        </cause>\
+        <cause>\
+            <description>The host status changed to red</description>\
+            <action>Change the resource settings 在 resource pools —— red so \
+            that they can accommodate their child virtual machines. If this 不 possible, lower \
+            the virtual machine reservations. If this 不 possible either, power off some \
+	    virtual machines.</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+NoMaintenanceModeDrsRecommendationForVM.longDescription= "\
+    <EventLongDescription id="vim.事件.NoMaintenanceModeDRSRecommendationForVM">\
+       <description>\
+          DRS failed to generate a vMotion recommendation for a virtual machine on a host entering \
+		  Maintenance Mode. This condition typically occurs because no other host \
+		  在 DRS cluster is compatible 使用 virtual machine. Unless you manually \
+		  migrate or power off this virtual machine, the host will be unable to enter \
+		  Maintenance Mode. \
+       </description>\
+       <cause>\
+            <description>DRS failed to evacuate a powered on virtual machine</description>\
+            <action>Manually migrate the virtual machine to another host 在 cluster</action>\
+            <action>Power off the virtual machine</action>\
+            <action>Bring any hosts in Maintenance Mode out of that mode</action>\
+            <action>Cancel the task —— making the host enter Maintenance Mode </action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+NotEnoughResourcesToStartVmEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.NotEnough资源ToStartVm事件">\
+       <description>\
+          This event is issued by vSphere HA when the master agent was not able to fail over \
+	  a virtual machine to one of its compatible hosts. This condition is due to one or \
+	  more 的 causes listed below. When this condition occurs, vSphere HA will report \
+	  a cause for it 在 event summary, but note that additional causes might exist.\
+	  It is more likely to occur if vSphere HA admission \
+	  control is disabled or more hosts fail than were provisioned for. When a virtual \
+	  machine cannot be placed, vSphere HA will retry placing it when the cluster state \
+	  changes. Also, if vSphere DRS is enabled, it will be invoked to try to defragment \
+	  the cluster or bring hosts out of Standby Mode.\
+       </description>\
+       <cause>\
+            <description>\
+            A virtual machine has bandwidth reservations for CPU, memory, vFlash cache, or virtual NICs. \
+	            There was no compatible host that had enough resources to satisfy \
+	            the reservations.\
+            </description>\
+            <action>Decrease the virtual machine resource reservation</action>\
+            <action>Add more host(s) to cluster</action>\
+            <action>Bring online any failed hosts or resolve a network partition if one exists</action>\
+            <action>If DRS is in manual mode, look for any pending recommendations \
+            和 approve them so that vSphere HA failover can proceed</action>\
+        </cause>\
+        <cause>\
+            <description>\
+	         The cluster has vSAN enabled, 和 one or more hosts that contribute storage\
+               到 cluster is inaccessible, preventing vSphere HA from powering 在 virtual machine.\
+               This applies to virtual machines that have one or more files on a vSAN datastore.\
+            </description>\
+            <action>Bring online any failed hosts or resolve a network partition if one \
+            exists that involves hosts that contribute storage 到 vSAN cluster</action>\
+        </cause>\
+        <cause>\
+            <description>One or more datastores —— associated with a virtual machine are \
+               inaccessible 由ny compatible host 在 cluster.</description>\
+            <action>Bring online any non-responding host that mounts the virtual machine datastores</action>\
+            <action>Fix the all-paths-down (APD) or permanent-device-loss (PDL) issues.</action>\
+        </cause>\
+        <cause>\
+            <description>vSphere HA is enforcing virtual machine to virtual machine \
+               anti-affinity rules, 和 the rule cannot be satisfied. </description>\
+            <action>Add more hosts to cluster</action>\
+            <action>Bring online any non-responding host or resolve a network partition if one exists</action>\
+            <action>Remove any anti-affinity rules —— restricting the placement</action>\
+        </cause>\
+        <cause>\
+            <description>数量 VMs that can run on each host is limited. \
+               There is no host that can power 在 VM without exceeding the limit.</description>\
+            <action>Increase the limit if you have set the limitVmsPerESXHost HA advanced option.</action>\
+            <action>Bring online any non-responding host or add new hosts 到 cluster</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+ResourcePoolReconfiguredEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.资源Pool已重新配置事件">\
+       <description>\
+          The resource pool configuration changed. The resource pool configuration \
+          includes information about the resource reservations 的 resource pool 和 \
+          the resource reservations of its children. \
+       </description>\
+    </EventLongDescription>\
+    "
+
+DasHostIsolatedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.Das主机Isolated事件">\
+       <description>\
+          vSphere HA detected that the host is network isolated. When a host is in this state, vSphere HA \
+          applies the power-off or shutdown host isolation response to virtual machines running 在 host, 和 \
+          continues to monitor the virtual machines —— left powered on. While a host is in this state, vSphere HA's \
+          ability to restart virtual machines after a failure is impacted. vSphere HA only powers off or shuts down a \
+          virtual machine if the agent 在 host determines that a master agent is responsible 的 virtual machine. \
+       </description>\
+       <cause>\
+            <description> \
+                A host is network isolated if both 的 following conditions are met: (1) \
+                isolation addresses have been configured 和 the host is unable to ping them; (2) \
+                the vSphere HA agent 在 host is unable to access any 的 agents running 在 other cluster hosts. \
+            </description>\
+            <action>\
+                 Resolve the networking problem —— preventing the host from pinging its isolation\
+                 addresses 和 communicating with other hosts. Ensure that there is redundancy 在 \
+                 management networks used by vSphere HA. With redundancy, vSphere HA is able to communicate \
+                over more than one path thus reducing the chance of a host becoming isolated. \
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostMissingNetworksEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Missing网络s事件">\
+       <description>\
+       The host being added 到 vSphere HA cluster has fewer management networks than \
+       existing hosts 在 cluster. When vSphere HA is being configured for a host, an existing \
+       host 在 cluster is examined 的 networks used by vSphere HA for heartbeats \
+       和 other vSphere HA communication.  The joining host is expected to have the same \
+       number of management networks, 和 optimally, have common subnets.  This \
+       helps facilitate the pairing of source/destination pairs for heartbeats. \
+       If common subnets are not detected (使用 the IP address/subnet mask) 介于 \
+       the member being added 和 the existing members 的 cluster, this event is \
+       generated 和 the configuration task fails. The event details report the \
+       subnets 的 existing member —— not present 在 joining member. \
+       </description>\
+       <cause>\
+            <description>\
+                The host does not have networks compatible with an existing cluster member\
+            </description>\
+            <action>\
+                Change the host's network configuration to enable vSphere HA traffic 在 same \
+                subnets as existing hosts 在 cluster. vSphere HA will use the Service Console \
+                port groups on ESX 和, on ESXi hosts, the port groups 使用 "Management Traffic" \
+                checkbox selected. After you change the host's network configuration, reconfigure \
+		vSphere HA for this host.\
+            </action>\
+            <action>\
+                Use advanced options to override the default port group selection for vSphere HA \
+                cluster communication. You can use the das.allowNetwork[X] advanced option \
+                to tell vSphere HA to use the port group specified in this option. \
+                For each port group name that should be used, specify one das.allowNetwork[X] \
+                advanced option. The vSphere HA configuration examines the host being added for \
+                port groups that match the name specified. The configuration task also examines \
+                an existing member whose port groups match the name specified. 数量 \
+                matched port group names must be the same on each host. After setting the advanced \
+		options, re-enable vSphere HA for this cluster.\
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostExtraNetworksEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Extra网络s事件">\
+       <description>\
+       The host being added 到 vSphere HA cluster has more management networks than \
+       existing hosts 在 cluster. When vSphere HA is being configured for a host, an existing \
+       host 在 cluster is examined 的 networks used by vSphere HA for heartbeats \
+       和 other vSphere HA communication. The joining host is expected to have the same \
+       number of management networks, 和 optimally, be 在 same subnets. This \
+       helps to facilitate the pairing up of source/destination pairs for heartbeats. \
+       If common subnets are not detected (使用 the IP address/subnet mask) 介于 \
+       the member being added 和 the existing members 的 cluster, this event is \
+       generated 和 the configuration task fails. The event details report the \
+       subnet 的 joining member —— not present 在 existing member. \
+       </description>\
+       <cause>\
+            <description>\
+                The host has extra networks missing on an existing cluster member\
+            </description>\
+            <action>\
+                Change the host's network configuration to enable vSphere HA traffic 在 same \
+                subnets as existing hosts 在 cluster. vSphere HA will use the Service Console \
+                port groups on ESX 和, on ESXi hosts, the port groups 使用 "Management Traffic" \
+                checkbox selected.\
+            </action>\
+            <action>\
+                Use advanced options to override the default port group selection for vSphere HA \
+                cluster communication.  You can use the das.allowNetwork[X] advanced option \
+                to tell vSphere HA to use the port group specified in this option. \
+                For each port group name that should be used, specify one das.allowNetwork[X] \
+                advanced option.  The vSphere HA configuration examines the host being added for \
+                port groups that match the name specified. The configuration task also examines \
+                an existing member whose port groups match the name specified. 数量 \
+                matched port group names must be the same on each host.  After setting the advanced \
+                options, re-enable vSphere HA 的 cluster.\
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostNoHAEnabledPortGroupsEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机NoHA已启用端口组s事件">\
+       <description>\
+       vSphere HA has determined that there are no management networks available 在 \
+       host for vSphere HA inter-agent communication.\
+       </description>\
+       <cause>\
+            <description>\
+                The host has no vSphere HA management networks available\
+            </description>\
+            <action>\
+                If this event is observed when the host is being added to a vSphere HA cluster, \
+                change the host's network configuration to enable vSphere HA traffic on one or \
+                more port groups. By default, vSphere HA will use the Service Console port groups \
+                on ESX 和 ESXi hosts, the port groups 使用 Management Traffic checkbox \
+                selected. If vSphere HA was already configured 在 host, it is possible that the \
+                host's network settings have changed 和 invalidated the management network \
+                configuration. Review the settings to make sure the port groups configured for \
+                management network still exist 在 host 和 for ESXi the Management Traffic option \
+                is enabled. Reconfigure vSphere HA 在 host after fixing any configuration issues.\
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostNoAvailableNetworksEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机No可用网络s事件">\
+       <description>\
+       The host being added 到 vSphere HA cluster has no management networks available for \
+       vSphere HA cluster communication. The advanced option das.allowNetwork[X] is set, but no \
+       port group names match the advanced option for this host.\
+       </description>\
+       <cause>\
+            <description>\
+                The host has no port groups that match the names used by the advanced options \
+                to control which port groups vSphere HA uses\
+            </description>\
+            <action>\
+                Delete the advanced options das.allowNetwork[X] to allow vSphere HA to select the default \
+                management port groups\
+            </action>\
+            <action>\
+                Correct the names 的 port groups specified 在 advanced options to match those \
+                to be used by vSphere HA for this host\
+            </action>\
+            <action>\
+                Specify additional das.allowNetwork[X] advanced options to match the port group names \
+                for this host\
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostIsolationIpPingFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机IsolationIpPing失败事件">\
+       <description>\
+        vSphere HA was unable to ping one or more 的 isolation IP addresses. The inability to ping the addresses \
+        may cause HA to incorrectly declare the host as network isolated. A host is declared as isolated if it cannot \
+        ping the configured isolation addresses 和 the vSphere HA agent 在 host is unable to access any 的 \
+        agents running 在 other cluster hosts. \
+       </description>\
+       <cause>\
+            <description>Could not ping the isolation address</description>\
+            <action>Correct the cause 的 failure to ping the address</action>\
+            <action>\
+                Use advanced options to change the addresses used by vSphere HA for determining if a host is \
+                network isolated. By default, the isolation address 是 default \
+        	gateway 的 management network. You can override the default 使用 advanced options, or \
+        	specify additional addresses to use for determining if a host is network isolated.  \
+        	Set the das.useDefaultIsolationAddress advanced option to "false" if you prefer that \
+		vSphere HA not use the default gateway as the isolation address. Specify the das.isolationAddress[X] \
+		advanced option for each isolation address that you want to specify. The new values \
+        	take effect when vSphere HA is reconfigured for each host.\
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostNoRedundantManagementNetworkEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机NoRedundantManagement网络事件">\
+       <description>\
+       vSphere HA has determined that there is only one path for vSphere HA management traffic, \
+       resulting in a single point of failure.  Best practices require \
+       more than one path for vSphere HA to use for heartbeats 和 cluster communication.  \
+       A host with a single path is more likely to be declared dead, network partitioned or \
+       isolated after a network failure. If declared dead, vSphere HA will not respond if the host \
+       subsequently actually fails, while if declared isolated, vSphere HA may apply the isolation \
+       response thus impacting the uptime 的 virtual machines running on it.\
+       </description>\
+       <cause>\
+            <description>There is only one port group available for vSphere HA communication</description>\
+            <action>Configure another Service Console port group 在 ESX host</action>\
+            <action>\
+                Configure another port group 在 ESXi host by selecting the "Management Traffic" \
+		check box\
+            </action>\
+            <action>\
+                Use NIC teaming 在 management port group to allow ESX or ESXi to direct management \
+                traffic out of more than one physical NIC in case of a path failure\
+            </action>\
+            <action>\
+                If you accept the risk of not having redundancy for vSphere HA communication, you can \
+                eliminate the configuration issue by setting the \
+                das.ignoreRedundantNetWarning advanced option to "true"\
+            </action>\
+       </cause>\
+    </EventLongDescription>\
+    "
+
+HostIpToShortNameFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机IpToShort名称失败事件">\
+       <description>\
+          The host's IP address could not be resolved to a short name \
+       </description>\
+       <cause>\
+            <description>The host or DNS records are improperly configured</description>\
+            <action>Check the host network configuration</action>\
+            <action>Check the DNS configuration</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostGetShortNameFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机GetShort名称失败事件">\
+       <description>\
+          The hostname -s command has failed 在 host \
+       </description>\
+       <cause>\
+            <description>The host network is improperly configured</description>\
+            <action>Check the host network configuration</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostPrimaryAgentNotShortNameEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Primary代理NotShort名称事件">\
+       <description>\
+          The primary agent 不 specified in short name format \
+       </description>\
+       <cause>\
+            <description>The host network is improperly configured</description>\
+            <action>Check the host network configuration</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostShortNameInconsistentEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Short名称Inconsistent事件">\
+       <description>\
+          The name resolution check 在 host returns different names 的 host \
+       </description>\
+       <cause>\
+            <description>The host network is improperly configured</description>\
+            <action>Check the host network configuration</action>\
+            <action>Check the DNS configuration</action>\
+        </cause>\
+    </EventLongDescription>\
+    "
+
+HostShortNameToIpFailedEvent.longDescription= "\
+    <EventLongDescription id="vim.事件.主机Short名称ToIp失败事件">\
+       <description>\
+          The short name 的 host can not be resolved to an IP address \
+       </description>\
+       <cause>\
+            <description>The host network is improperly configured</description>\
+            <action>Check the host network configuration</action>\
+            <action>Check the DNS configuration</action>\
+        </cause>\
+    </EventLongDescription>\
+    "

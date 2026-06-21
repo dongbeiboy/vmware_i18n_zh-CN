@@ -1,0 +1,658 @@
+# zh_CN resources
+signature="sIgNaTuRe"
+###
+###
+AndAlarmExpression.label="AND"
+AndAlarmExpression.summary="描述联合警报表达式的警报表达式"
+###
+OrAlarmExpression.label="OR"
+OrAlarmExpression.summary="描述分离警报表达式的警报表达式"
+###
+StateAlarmExpression.label="实体状态"
+StateAlarmExpression.summary="基于主机的连接状态、电源状态或虚拟机定义的警报表达式"
+StateAlarmExpression.valueSummary="状态等于 {1,C}"
+StateAlarmExpression.yellowSummary="黄色状态 {operator} {yellow.state}"
+StateAlarmExpression.redSummary="红色状态 {operator} {red.state}"
+###
+MetricAlarmExpression.label="实体指标"
+MetricAlarmExpression.summary="基于实体指标数据定义的警报表达式"
+MetricAlarmExpression.valueSummary="指标 {1,C} 等于 {2,I,m}"
+MetricAlarmExpression.yellowSummary="黄色指标 {operator} {yellow.value,m}"
+MetricAlarmExpression.redSummary="红色指标 {operator} {red.value,m}"
+MetricAlarmExpression.nonPercent.valueSummary="指标 {1,C} 等于 {2,I,l}"
+MetricAlarmExpression.nonPercent.yellowSummary="黄色指标 {operator} {yellow.value,l}"
+MetricAlarmExpression.nonPercent.redSummary="红色指标 {operator} {red.value,l}"
+###
+HostConnectionStateAlarm.label="主机 连接 和 电源 状态"
+HostConnectionStateAlarm.summary="用于监控 主机 连接 和 电源 状态的默认警报"
+HostCPUUsageAlarm.label="主机 CPU 使用率"
+HostCPUUsageAlarm.summary="用于监控 主机 CPU 使用率的默认警报"
+HostMemoryUsageAlarm.label="主机 内存 使用率"
+HostMemoryUsageAlarm.summary="用于监控 主机 内存 使用率的默认警报"
+HostEsxCosSwapAlarm.label="主机 服务 console swap rates"
+HostEsxCosSwapAlarm.summary="用于监控 主机 服务 console 内存 swap rates的默认警报"
+VmCPUUsageAlarm.label="虚拟机 CPU 使用率"
+VmCPUUsageAlarm.summary="用于监控 虚拟机 CPU 使用率的默认警报"
+VmMemoryUsageAlarm.label="虚拟机 内存 使用率"
+VmMemoryUsageAlarm.summary="用于监控 虚拟机 内存 使用率的默认警报"
+DatastoreDiskUsageAlarm.label="数据存储 使用率 on 磁盘"
+DatastoreDiskUsageAlarm.summary="用于监控 数据存储 磁盘 使用率的默认警报"
+###
+VmCPUReadyAlarm.label="虚拟机 CPU ready"
+VmCPUReadyAlarm.summary="用于监控 虚拟机 CPU ready time的默认警报"
+VmDiskLatencyAlarm.label="虚拟机 总计 磁盘 延迟"
+VmDiskLatencyAlarm.summary="用于监控 虚拟机 总计 磁盘 延迟的默认警报"
+VmDiskAbortsAlarm.label="虚拟机 磁盘 comm和s 已取消"
+VmDiskAbortsAlarm.summary="用于监控 number of 虚拟机 磁盘 comm和s 已取消的默认警报"
+VmDiskResetAlarm.label="虚拟机 磁盘 重置"
+VmDiskResetAlarm.summary="用于监控 number of 虚拟机 bus 重置s的默认警报"
+###
+LicenseNonComplianceAlarm.label="许可证 inventory 正在监控"
+LicenseNonComplianceAlarm.summary="用于监控 if 许可证 inventory 不 compliant的默认警报"
+LicenseUserThresholdExceededAlarm.label="许可证 用户 阈值 正在监控"
+LicenseUserThresholdExceededAlarm.summary="用于监控 if a 用户-定义d 许可证 阈值 is exceeded的默认警报"
+LicenseCapacityExceededAlarm.label="许可证 容量 正在监控"
+LicenseCapacityExceededAlarm.summary="用于监控 if a 许可证 容量 is exceeded的默认警报"
+HostLicenseEditionNotAllowed.label="The 主机 许可证 edition 不 compatible 使用 vCenter 服务器 许可证 edition"
+HostLicenseEditionNotAllowed.summary="用于监控 if 主机 许可证 edition 不 allowed的默认警报"
+LicenseExpiredVc.label="Expired vCenter 服务器 许可证"
+LicenseExpiredVc.summary="用于监控 for 已过期 vCenter 服务器 许可证 or evaluation period.的默认警报"
+LicenseExpiredHost.label="Expired 主机 许可证"
+LicenseExpiredHost.summary="用于监控 for 已过期 主机 许可证 or evaluation period.的默认警报"
+LicenseExpiredVsan.label="Expired vSAN 许可证"
+LicenseExpiredVsan.summary="用于监控 for 已过期 vSAN 许可证 or evaluation period.的默认警报"
+SubscriptionLicenseExpiredVc.label="Expired vCenter 服务器 time-限制ed 许可证"
+SubscriptionLicenseExpiredVc.summary="用于监控 for 已过期 vCenter 服务器 time-限制ed 许可证.的默认警报"
+SubscriptionLicenseExpiredHost.label="Expired 主机 time-限制ed 许可证"
+SubscriptionLicenseExpiredHost.summary="用于监控 for 已过期 主机 time-限制ed 许可证.的默认警报"
+SubscriptionLicenseExpiredVsan.label="Expired vSAN time-限制ed 许可证"
+SubscriptionLicenseExpiredVsan.summary="用于监控 for 已过期 vSAN time-限制ed 许可证.的默认警报"
+VsanHostSsdOverUsageAlarm.label="主机 flash 容量 exceeds the 许可证d 限制 for vSAN"
+VsanHostSsdOverUsageAlarm.summary="用于监控 if the 容量 的 flash 磁盘s 在 主机 exceeds the 限制 的 vSAN 许可证的默认警报"
+VsanClusterLicenseExpiryAlarm.label="Expired vSAN 许可证"
+VsanClusterLicenseExpiryAlarm.summary="Default 警报 for 已过期 vSAN 许可证 or evaluation period."
+VsanHostDiskErrorAlarm.label="错误 发生 在 磁盘(s) 的 vSAN 主机"
+VsanHostDiskErrorAlarm.summary="Default 警报 that 监控s whether there are 错误 在 主机 磁盘(s) 在 vSAN 集群."
+VmTimedoutStartingSecondaryAlarm.label="Timed out starting Secondary VM"
+VmTimedoutStartingSecondaryAlarm.summary="用于监控 time-outs when starting a Secondary VM的默认警报"
+VmNoCompatibleHostForSecondaryAlarm.label="No compatible 主机 for Secondary VM"
+VmNoCompatibleHostForSecondaryAlarm.summary="用于监控 if no compatible 主机s are 可用 to place Secondary VM的默认警报"
+VmFaultToleranceStateChangedAlarm.label="虚拟机 Fault Tolerance 状态 已更改"
+VmFaultToleranceStateChangedAlarm.summary="用于监控 更改s 在 Fault Tolerance 状态 的 虚拟机的默认警报"
+VmFaultToleranceLatencyStatusAlarm.label="虚拟机 Fault Tolerance v锁定Step 间隔 状态 已更改"
+VmFaultToleranceLatencyStatusAlarm.summary="用于监控 更改s 在 Fault Tolerance Secondary v锁定Step 间隔的默认警报"
+ProcessorHealthAlarm.label="主机 processor 状态"
+ProcessorHealthAlarm.summary="用于监控 processors.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+MemoryHealthAlarm.label="主机 内存 状态"
+MemoryHealthAlarm.summary="用于监控 内存.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+FanHealthAlarm.label="主机 hardware 风扇 状态"
+FanHealthAlarm.summary="用于监控 风扇s.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+VoltageHealthAlarm.label="主机 hardware 电压"
+VoltageHealthAlarm.summary="用于监控 电压.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+TemperatureHealthAlarm.label="主机 hardware 温度 状态"
+TemperatureHealthAlarm.summary="用于监控 温度.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+PowerHealthAlarm.label="主机 hardware 电源 状态"
+PowerHealthAlarm.summary="用于监控 电源.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+SystemBoardHealthAlarm.label="主机 hardware system board 状态"
+SystemBoardHealthAlarm.summary="用于监控 system boards.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+BatteryHealthAlarm.label="主机 电池 状态"
+BatteryHealthAlarm.summary="用于监控 batteries.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+OtherHealthAlarm.label="状态 of other 主机 hardware objects"
+OtherHealthAlarm.summary="用于监控 objects.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+StorageHealthAlarm.label="主机 存储 状态"
+StorageHealthAlarm.summary="用于监控 存储.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+SELHealthAlarm.label="主机 IPMI System 事件 日志 状态"
+SELHealthAlarm.summary="Monitors the fullness 的 IPMI System 事件 日志.  See the 主机's Hardware 状态 tab for more 详细信息."
+BMCHealthAlarm.label="主机 Baseboard Management Controller 状态"
+BMCHealthAlarm.summary="Monitors the 状态 的 Baseboard Management Controller. See the 主机's Hardware 状态 tab for more 详细信息."
+HardwareSensorStateChange.label="主机 hardware sensor 状态"
+HardwareSensorStateChange.summary="用于监控 sensor 状态 更改.  See the 主机's Hardware 状态 tab for more 详细信息.的默认警报"
+# Event-based alarms
+HostErrorAlarm.label="主机错误"
+HostErrorAlarm.summary="用于监控 主机 错误 和 警告 事件s的默认警报"
+VmErrorAlarm.label="虚拟机 错误"
+VmErrorAlarm.summary="用于监控 虚拟机 错误 和 警告 事件s的默认警报"
+HostConnectivityAlarm.label="主机 连接 failure"
+HostConnectivityAlarm.summary="用于监控 主机 连接 failure的默认警报"
+IormNonVIWorkloadAlarm.label="Unmanaged work加载 detected on SIOC-已启用 数据存储"
+IormNonVIWorkloadAlarm.summary="Default 警报 —— 触发 if an unmanaged I/O work加载 is detected 在 SIOC-已启用 数据存储"
+ThinProvisionedLunAlarm.label="Thin-已置备 卷 容量 阈值 exceeded"
+ThinProvisionedLunAlarm.summary="Default 警报 —— 触发 when the 精简置备 阈值 在 存储 array is exceeded for 卷(s) backing the 数据存储"
+LunCapabilityAlarm.label="数据存储 capability 警报"
+LunCapabilityAlarm.summary="Default 警报 —— 触发 when the capability 状态 of 卷s backing the 数据存储 更改s"
+VasaProviderDisconnectedAlarm.label="VASA provIDEr 已断开连接"
+VasaProviderDisconnectedAlarm.summary="Default 警报 —— 触发 when a VASA provIDEr is 在 已断开连接 状态"
+VasaProviderCertificateExpiryAlarm.label="VASA ProvIDEr 证书 expiration 警报"
+VasaProviderCertificateExpiryAlarm.summary="Default 警报 —— 触发 when a VASA ProvIDEr 证书 is about to expire"
+VcCertificateUpdateFailedAlarm.label="警告s detected after vCenter 服务器 TLS 证书 replacement"
+VcCertificateUpdateFailedAlarm.summary="TLS 证书 replaced 成功fully, but there are 警告s detected. Please 添加ress the 警告s by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+WCPCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for WCP https://kb.vmware.com/s/article/90465"
+WCPCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the WCP 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+CPVMCertificateUpdateFailedAlarm.label="失败 to auto-rotate the 证书s for CPVM."
+CPVMCertificateUpdateFailedAlarm.summary="失败 to auto-rotate the 证书 for CPVM. 证书 auto-rotation will be retried every 12 小时. To manually rotate the 证书s, please follow the steps listed in KB article: https://www.vmware.com/go/rotate-tanzu-supervisor-证书s"
+SphereletCertificateUpdateFailedAlarm.label="失败 to auto-rotate the 证书s for Spherelet"
+SphereletCertificateUpdateFailedAlarm.summary="失败 to auto-rotate the 证书s for Spherelet. 证书 auto-rotation will be re-tried. To manually rotate the 证书s, please follow the steps listed in KB article: https://www.vmware.com/go/rotate-tanzu-supervisor-证书s"
+VLCMCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for VLCM https://kb.vmware.com/s/article/90465"
+VLCMCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the VLCM 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+UpdatemgrCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for Update Manager https://kb.vmware.com/s/article/90465"
+UpdatemgrCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the Update Manager 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+VsanHealthCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for VSAN HEALTH https://kb.vmware.com/s/article/90465"
+VsanHealthCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the Vsan 运行状况 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+AutoDeployCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for Auto 部署 https://kb.vmware.com/s/article/90465"
+AutodeployCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the Auto 部署 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+PODCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for POD https://kb.vmware.com/s/article/90465"
+PODCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the POD 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+SPSCertificateUpdateFailedAlarm.label="失败 to 更新 the 证书s for SPS https://kb.vmware.com/s/article/90465"
+SPSCertificateUpdateFailedAlarm.summary="The 警报 —— 触发 to indicate that the SPS 服务 失败 to 加载 the new 证书s. Please 添加ress the 警告 by following the 修复 instructions provIDEd 在 corresponding 事件 描述"
+ClusterOperationCancelledDueToCertRefreshAlarm.label="VUM 任务 on 集群 is 已取消. Refer https://kb.vmware.com/s/article/90842"
+ClusterOperationCancelledDueToCertRefreshAlarm.summary="The 警报 —— 触发 when an in-flight VUM 任务 on 集群 is 已取消 due to VC TLS 证书 replacement"
+HostOperationCancelledDueToCertRefreshAlarm.label="VUM 任务 on 主机 is 已取消. Refer https://kb.vmware.com/s/article/90842"
+HostOperationCancelledDueToCertRefreshAlarm.summary="The 警报 —— 触发 when an in-flight VUM 任务 on 主机 is 已取消 due to VC TLS 证书 replacement"
+OperationCancelledDueToCertRefreshAlarm.label="VUM 任务 is 已取消. Refer https://kb.vmware.com/s/article/90842"
+OperationCancelledDueToCertRefreshAlarm.summary="The 警报 —— 触发 when an in-flight VUM 任务 on 数据中心 or 文件夹 is 已取消 due to VC TLS 证书 replacement"
+VmStorageComplianceAlarm.label="VM 存储 合规性 警报"
+VmStorageComplianceAlarm.summary="Default 警报 —— 触发 when the 虚拟磁盘 goes out of 合规性 使用 object-based 存储"
+DatastoreStorageComplianceAlarm.label="数据存储 合规性 警报"
+DatastoreStorageComplianceAlarm.summary="Default 警报 —— 触发 when the 虚拟磁盘 在 数据存储 goes out of 合规性 使用 object-based 存储"
+VasaProviderRefreshCACertsAndCRLsFailureAlarm.label="刷新ing CA 证书s 和 CRLs 为 VASA provIDEr 失败"
+VasaProviderRefreshCACertsAndCRLsFailureAlarm.summary="Default 警报 that 监控s whether the 刷新ing of CA 证书s 和 CRLs for some 的 VASA provIDErs has 失败."
+VasaProviderObjectAlarm.label="Object 类型 存储 警报"
+VasaProviderObjectAlarm.summary="Default 警报 —— 触发 when a VASA provIDEr raises an Object 类型 警报 on an entity backing the 数据存储"
+EsxiVasaClientCertificateProvisionFailureAlarm.label="ESXi VASA 客户端 证书 provision has 失败"
+EsxiVasaClientCertificateProvisionFailureAlarm.summary="Default 警报 that 监控s whether the provision of ESXi VASA 客户端 证书 has 失败"
+EsxiVasaClientCertificateRegisterFailureAlarm.label="ESXi VASA 客户端 证书 注册 to some/all VPs has 失败"
+EsxiVasaClientCertificateRegisterFailureAlarm.summary="Default 警报 that 监控s whether 注册 of ESXi VASA 客户端 证书 注册 to some/all VPs has 失败"
+RegisterVcClientCertOnRenewalFailureAlarm.label="注册ing 已续订 VC 客户端 证书 失败 for some/all VASA provIDErs"
+RegisterVcClientCertOnRenewalFailureAlarm.summary="Default 警报 that 监控s whether the 注册 of 已续订 VC 客户端 证书 失败 for any VASA provIDEr"
+VcClientAndVpCertRefreshOnVmcaRootCertRotationFailureAlarm.label="On VMCA Root 证书 rotation, 注册 of VC 客户端 证书 和/or 刷新 of VASA VP 证书 失败 for some/all VASA 5.0 or greater VASA provIDErs"
+VcClientAndVpCertRefreshOnVmcaRootCertRotationFailureAlarm.summary="Default 警报 that 监控s whether 注册 of VC 客户端 证书 和/or 刷新 of VP 证书 on VMCA Root rotation 失败 for any VASA 5.0 or greater VASA provIDEr"
+# Deprecated
+NetworkConnectivityAlarm.label="Cannot 连接 to 网络"
+NetworkConnectivityAlarm.summary="用于监控 网络 连接ivity 在 virtual switch的默认警报"
+VCHealthStateChangedAlarm.label="Health 状态 正在监控"
+VCHealthStateChangedAlarm.summary="用于监控 更改s in 超过all 运行状况 状态. See vCenter 服务 Health 在 Administration application for more 详细信息.的默认警报"
+SiocNotSupportedHostAlarm.label="Pre-4.1 主机 已连接 to SIOC-已启用 数据存储"
+SiocNotSupportedHostAlarm.summary="Default 警报 —— 触发 if a pre-4.1 主机 is 已连接 到 SIOC-已启用 数据存储"
+
+NetworkConnectivityLostAlarm.label="网络 连接ivity lost"
+NetworkConnectivityLostAlarm.summary="用于监控 网络 连接ivity 在 virtual switch的默认警报"
+NetworkRedundancyLostAlarm.label="网络 上行链路 redundancy lost"
+NetworkRedundancyLostAlarm.summary="用于监控 loss of 网络 上行链路 redundancy 在 virtual switch的默认警报"
+NetworkRedundancyDegradedAlarm.label="网络 上行链路 redundancy degraded"
+NetworkRedundancyDegradedAlarm.summary="用于监控 网络 上行链路 redundancy degradation 在 virtual switch的默认警报"
+E1000TSO6NotSupportedAlarm.label="IPv6 TSO not 支持"
+E1000TSO6NotSupportedAlarm.summary="Default 警报 indicating that the guest operating system 的 虚拟机 sends IPv6 TSO 数据包 that will be 丢弃"
+MigrateBindToVMKAlarm.label="VMKernel NIC not 已配置 correctly"
+MigrateBindToVMKAlarm.summary="Default 警报 for incorrectly 已配置 VMkernel NIC"
+
+StorageConnectivityAlarm.label="Cannot 连接 to 存储"
+StorageConnectivityAlarm.summary="用于监控 主机 连接ivity to 存储 设备的默认警报"
+MigrationErrorAlarm.label="迁移 错误"
+MigrationErrorAlarm.summary="用于监控 if a 虚拟机 cannot 迁移, relocate, or is orphaned的默认警报"
+ExitSt和byErrorAlarm.label="Exit st和by 错误"
+ExitSt和byErrorAlarm.summary="用于监控 if a 主机 cannot exit st和by mode的默认警报"
+
+# vSphere HA alarms
+HAinsufficientFailoverResources.label="Insufficient vSphere HA fail超过 资源"
+HAinsufficientFailoverResources.summary="用于警报 when there are insufficient 集群 资源 for vSphere HA to guarantee fail超过的默认警报"
+HAfailoverInProgress.label="vSphere HA fail超过 in progress"
+HAfailoverInProgress.summary="用于警报 when vSphere HA is 在 process of failing 超过 虚拟机s的默认警报"
+HAcannotFindMaster.label="Cannot find vSphere HA master 代理"
+HAcannotFindMaster.summary="用于警报 when vCenter 服务器 has been unable to 连接 到 vSphere HA master 代理 为 prolonged period的默认警报"
+HAhostStatus.label="vSphere HA 主机 状态"
+HAhostStatus.summary="用于监控 运行状况 的 主机 as re端口ed by vSphere HA的默认警报"
+HAfailoverFailed.label="vSphere HA 虚拟机 fail超过 失败"
+HAfailoverFailed.summary="用于警报 when vSphere HA 失败 to fail超过 a 虚拟机的默认警报"
+HAvmMonitoringAction.label="vSphere HA 虚拟机 正在监控 action"
+HAvmMonitoringAction.summary="用于警报 when vSphere HA 重置 a 虚拟机的默认警报"
+HAvmMonitoringError.label="vSphere HA 虚拟机 正在监控 错误"
+HAvmMonitoringError.summary="用于警报 when vSphere HA 失败 to 重置 a 虚拟机的默认警报"
+VmcpTerminateVmAborted.label="vSphere HA VM Component Protection could not 关闭电源 a 虚拟机"
+VmcpTerminateVmAborted.summary="Default 警报 —— 触发 when vSphere HA VM Component Protection cannot 关闭电源 a 虚拟机 with an inaccessible 数据存储"
+
+# Deprecated vSphere HA alarms (as of 5.0)
+VmHighAvailabilityError.label="虚拟机 高可用性 错误"
+VmHighAvailabilityError.summary="用于监控 高可用性 错误 在 虚拟机的默认警报"
+HighAvailabilityError.label="集群 高可用性 错误"
+HighAvailabilityError.summary="用于监控 高可用性 错误 在 集群的默认警报"
+HighAvailabilityAction.label="集群 高可用性 action in progress"
+HighAvailabilityAction.summary="Default 警报 —— 触发 when a 高可用性 fail超过 is in progress"
+
+# Backup Restore alarms
+BackupStatusVc.label="备份 job 状态"
+BackupStatusVc.summary="用于监控 备份 job 状态.的默认警报"
+
+LicenseError.label="许可证错误"
+LicenseError.summary="用于监控 许可证 错误的默认警报"
+HealthStatusChangedAlarm.label="Health 状态 已更改 警报"
+HealthStatusChangedAlarm.summary="用于监控 更改s to 服务 和 extension 运行状况 状态的默认警报"
+VmComponentProtectionRestartErrorAlarm.label="虚拟机 component protection 重新启动 错误"
+VmComponentProtectionRestartErrorAlarm.summary="Default 警报 —— 触发 when vSphere HA VM Component Protection fails to 重新启动 a 虚拟机"
+###
+EventAlarmExpression.label="Event"
+EventAlarmExpression.summary="事件 警报 表达式"
+EventAlarmExpression.statusSummary="状态 = {status}"
+###
+CurrentValue.label="电流 值s for metric/状态"
+EventDetail.label="事件 详细信息"
+
+### StoragePod Related Alarms
+StoragePodSDRSRecommendation.label="存储 DRS recommendation"
+StoragePodSDRSRecommendation.summary="警报 that 监控s a 存储 DRS recommendation"
+
+StoragePodSDRSNotSupportedHost.label="存储 DRS 不 支持 在 主机"
+StoragePodSDRSNotSupportedHost.summary="警报 that 监控s 和 警报s when 存储 DRS 不 支持 在 主机"
+
+StoragePodOutOfSpace.label="数据存储 集群 is out of space"
+StoragePodOutOfSpace.summary="警报 that 监控s when a 数据存储 集群 is out of space"
+
+DatastoreInMultipleDatacenters.label="数据存储 is in multiple 数据中心s"
+DatastoreInMultipleDatacenters.summary="数据存储 在 数据存储 集群 is visible in more than one 数据中心"
+
+ConsistencyGroupViolation.label="SRM Consistency 组 Violation"
+ConsistencyGroupViolation.summary="数据存储 集群 has 数据存储s that belong to different SRM Consistency 组s"
+
+### Vds healthcheck Alarms
+VdsHCVlanTrunkedAlarm.label="vSphere Distributed Switch VLAN trunked 状态"
+VdsHCVlanTrunkedAlarm.summary="用于监控 更改s in vSphere Distributed Switch VLAN trunked 状态的默认警报"
+
+VdsHCMTUMatchAlarm.label="vSphere Distributed Switch MTU matched 状态"
+VdsHCMTUMatchAlarm.summary="用于监控 更改s in vSphere Distributed Switch MTU matched 状态的默认警报"
+
+VdsHCMTUSupportedAlarm.label="vSphere Distributed Switch MTU 支持 状态"
+VdsHCMTUSupportedAlarm.summary="用于监控 更改s in vSphere Distributed Switch MTU 支持 状态的默认警报"
+
+VdsHCTeamingMatchAlarm.label="vSphere Distributed Switch teaming matched 状态"
+VdsHCTeamingMatchAlarm.summary="用于监控 更改s in vSphere Distributed Switch teaming matched 状态的默认警报"
+
+VmAdapterResvervationStatus.label="虚拟机 网络 adapter 预留 状态"
+VmAdapterResvervationStatus.summary="用于监控 更改s 在 预留 状态 的 虚拟机 网络 adapter的默认警报"
+
+VmDiskConsolidationNeededAlarm.label="虚拟机 ConsolIDation Needed 状态"
+VmDiskConsolidationNeededAlarm.summary="Default 警报 —— 触发 when 虚拟机 ConsolIDation Needed 状态 is 设置"
+
+### vSphere Flash Alarms
+VFlashResourceHealthAlarm.label="主机 virtual flash 资源 状态"
+VFlashResourceHealthAlarm.summary="用于监控 the VMware Flash Read Cache 资源 状态 在 主机的默认警报"
+
+VFlashResourceUsageAlarm.label="主机 virtual flash 资源 使用率"
+VFlashResourceUsageAlarm.summary="用于监控 the VMware Flash Read Cache 资源 使用率 在 主机的默认警报"
+
+### HOST VSAN VP registration alarm
+HostVendorProviderRegistrationAlarm.label="Registration/un注册 的 VASA vendor provIDEr 在 vSAN 主机 fails"
+HostVendorProviderRegistrationAlarm.summary="Default 警报 that 监控s whether the 注册 or un注册 的 VASA vendor provIDEr 在 vSAN 主机 fails."
+
+### HOST IoFilter VP registration alarm
+IoFilterHostVendorProviderRegistrationAlarm.label="Registration/un注册 of third-party IO filter 存储 provIDErs fails 在 主机"
+IoFilterHostVendorProviderRegistrationAlarm.summary="Default 警报 that 监控s whether vCenter 服务器 fails to 注册 or 注销 third-party IO filter 存储 provIDErs 在 主机."
+
+### IoFilter filter management operation alarm
+IoFilterManagementOperationAlarm.label="vSphere APIs for IO Filtering (VAIO) Filter Management Operations"
+IoFilterManagementOperationAlarm.summary="Default 警报 —— 触发 when vSphere APIs for IO Filtering (VAIO) operations (正在安装/un正在安装/upgrading filters) fail for some 主机s 在 集群"
+
+### Component Health Alarms
+ServiceControlAgentHealthAlarm.label="服务 Control 代理 Health 警报"
+ServiceControlAgentHealthAlarm.summary="警报 —— 触发 when the 服务 Control 代理 不 reachable."
+IdentityHealthAlarm.label="IDEntity Health 警报"
+IdentityHealthAlarm.summary="IDEntity 服务 警报 to 监控 运行状况 状态"
+VsphereClientHealthAlarm.label="vSphere 客户端 Health 警报"
+VsphereClientHealthAlarm.summary="vSphere 客户端 服务 警报 to 监控 运行状况 状态"
+VsphereUiHealthAlarm.label="vSphere UI Health 警报"
+VsphereUiHealthAlarm.summary="vSphere UI 服务 警报 to 监控 运行状况 状态"
+EAMHealthAlarm.label="ESX 代理 管理器 Health 警报"
+EAMHealthAlarm.summary="ESX 代理 管理器 服务 警报 to 监控 运行状况 状态"
+MsgBusHealthAlarm.label="Message Bus Config Health 警报"
+MsgBusHealthAlarm.summary="Message Bus Config 服务 警报 to 监控 运行状况 状态"
+LicenseHealthAlarm.label="Cis 许可证 Health 警报"
+LicenseHealthAlarm.summary="Cis 许可证 服务 警报 to 监控 运行状况 状态"
+ApplmgmtHealthAlarm.label="Appliance Management Health 警报"
+ApplmgmtHealthAlarm.summary="Appliance Management 服务 警报 to 监控 运行状况 状态"
+
+# Deprecated: replaced by VpxdSvcsHealthAlarm
+InventoryHealthAlarm.label="Inventory Health 警报"
+InventoryHealthAlarm.summary="Inventory 服务 警报 to 监控 运行状况 状态"
+
+VpxdSvcsHealthAlarm.label="VMware vCenter-服务s Health 警报"
+VpxdSvcsHealthAlarm.summary="VMware vCenter-服务s 警报 to 监控 运行状况 状态"
+HvcHealthAlarm.label="HybrID vCenter 服务 Health 警报"
+HvcHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of HybrID vCenter 服务"
+VCServerHealthAlarm.label="vCenter 服务器 Health 警报"
+VCServerHealthAlarm.summary="vCenter 服务器 服务 警报 to 监控 运行状况 状态"
+DSHealthAlarm.label="Data 服务 Health 警报"
+DSHealthAlarm.summary="Data 服务 服务 警报 to 监控 运行状况 状态"
+RBDHealthAlarm.label="RBD Health 警报"
+RBDHealthAlarm.summary="RBD 服务 警报 to 监控 运行状况 状态"
+VSMHealthAlarm.label="v服务 管理器 Health 警报"
+VSMHealthAlarm.summary="v服务 管理器 服务 警报 to 监控 运行状况 状态"
+PerfchartsHealthAlarm.label="性能 Charts 服务 Health 警报"
+PerfchartsHealthAlarm.summary="性能 Charts 服务 警报 to 监控 运行状况 状态"
+ContentLibraryServiceHealthAlarm.label="Content Library 服务 Health 警报"
+ContentLibraryServiceHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware Content Library 服务."
+
+# Deprecated
+TsHealthAlarm.label="Transfer 服务 Health 警报"
+TsHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware Transfer 服务."
+
+NetdumperHealthAlarm.label="VMware vSphere ESXi Dump Collector Health 警报"
+NetdumperHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware vSphere ESXi Dump Collector 服务."
+VapiEndpointHealthAlarm.label="VMware vAPI Endpoint 服务 Health 警报"
+VapiEndpointHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware vAPI Endpoint 服务."
+
+# Deprecated
+VwsHealthAlarm.label="VMware System 和 Hardware Health 管理器 服务 Health 警报"
+VwsHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware System 和 Hardware Health 管理器 服务."
+
+SpsHealthAlarm.label="VMware vSphere Profile-Driven 存储 服务 Health 警报"
+SpsHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware vSphere Profile-Driven 存储 服务."
+
+# Deprecated
+VmwareSyslogHealthAlarm.label="VMware Common 日志记录 服务 Health 警报"
+VmwareSyslogHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 VMware Common 日志记录 服务."
+
+VmwareVpostgresHealthAlarm.label="PostgreSQL 服务 Health 警报"
+VmwareVpostgresHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 的 PostgreSQL 服务."
+VmwarePgArchiverHealthAlarm.label="PostgreSQL Archiver 服务 Health 警报"
+VmwarePgArchiverHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of PostgreSQL Archiver 服务."
+VmwareRhttpproxyHealthAlarm.label="VMware HTTP Reverse Proxy 服务 Health 警报."
+VmwareRhttpproxyHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of HTTP Reverse Proxy 服务."
+StatsmonitorHealthAlarm.label="vCenter Stats Monitor 服务 Health 警报."
+StatsmonitorHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of vCenter Stats Monitor 服务."
+VchaHealthAlarm.label="vCenter HA 服务 Health 警报."
+VchaHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of vCenter HA 服务."
+PscHealthAlarm.label="PSC 服务 Health 警报."
+PscHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of PSC 服务."
+ImageBuilderHealthAlarm.label="Image Builder 服务 Health 警报"
+ImageBuilderHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of Image Builder 服务."
+UpdateMgrHealthAlarm.label="Update Manager 服务 Health 警报"
+UpdateMgrHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of Update Manager 服务."
+VmonApiHealthAlarm.label="vMon API 服务 Health 警报"
+VmonApiHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of vMon API 服务."
+ComponentMgrHealthAlarm.label="Component 管理器 服务 Health 警报"
+ComponentMgrHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of Component 管理器 服务."
+VsphereAuthProxyHealthAlarm.label="VMware vSphere 身份验证 Proxy 服务 Health 警报"
+VsphereAuthProxyHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of VMware vSphere 身份验证 Proxy 服务."
+VsanHealthAlarm.label="vSAN Health 服务 警报"
+VsanHealthAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of vSAN Health 服务s."
+
+HostCertsUpdateFailedAlarm.label="ESXi 主机 证书s 更新 Failure 状态"
+HostCertsUpdateFailedAlarm.summary="警报 to indicate that the 证书s 更新 on an ESXi 主机 失败"
+HostCertStatusAlarm.label="ESXi 主机 证书 状态"
+HostCertStatusAlarm.summary="警报 to indicate 证书 状态 的 ESXi 主机"
+HostCertVerificationFailedAlarm.label="ESXi 主机 证书 Verification Failure 状态"
+HostCertVerificationFailedAlarm.summary="警报 to indicate that the ESXi 主机 证书 验证 失败"
+HostCertManagementModeChangedAlarm.label="When ESXi 证书 Mode is 设置 to custom it is m和atory to 添加 the custom CA 证书s to vCenter trusted root store before 正在更新 the 主机 证书s"
+HostCertManagementModeChangedAlarm.summary="警报 to 监控 更改s 在 证书 management mode of vCenter 服务器"
+HostCertManagementModeThumbprintAlarm.label="ESXi 证书 Mode 'thumbprint' is deprecated"
+HostCertManagementModeThumbprintAlarm.summary="ESXi 证书 Mode is 设置 to deprecated 值, 'thumbprint'. Use a 支持 mode ('vmca' or 'custom')."
+
+MachineSSLCertificateStatusAlarm.label="MACHINE_SSL_CERT 证书 in VECS is about to expire https://knowledge.broadcom.com/external/article?articleNumber=318973"
+MachineSSLCertificateStatusAlarm.summary="This 警报 indicates that Machine SSL 证书 in VECS store is getting close to its expiration date."
+
+MachineSSLCertificateExpiredAlarm.label="MACHINE_SSL_CERT 证书 in VECS has 已过期 https://knowledge.broadcom.com/external/article?articleNumber=318973"
+MachineSSLCertificateExpiredAlarm.summary="This 警报 indicates that Machine SSL 证书 in VECS store has 已过期."
+
+TrustedRootCertificateStatusAlarm.label="证书(s) in VECS TRUSTED_ROOTS store is about to expire https://knowledge.broadcom.com/external/article?articleNumber=318973"
+TrustedRootCertificateStatusAlarm.summary="This 警报 indicates that some 证书s in TRUSTED_ROOTS store of VECS is getting close to its expiration date."
+
+TrustedRootCertificateExpiredAlarm.label="证书(s) in VECS TRUSTED_ROOTS store has 已过期 https://knowledge.broadcom.com/external/article?articleNumber=318973"
+TrustedRootCertificateExpiredAlarm.summary="This 警报 indicates that some 证书s in TRUSTED_ROOTS store of VECS has 已过期."
+
+SolutionUserCertificateStatusAlarm.label="Solution 用户 证书(s) in VECS is about to expire https://knowledge.broadcom.com/external/article?articleNumber=318973"
+SolutionUserCertificateStatusAlarm.summary="This 警报 indicates that solution 用户 证书(s) in VECS is getting close to its expiration date."
+
+SolutionUserCertificateExpiredAlarm.label="Solution 用户 证书(s) in VECS has 已过期 https://knowledge.broadcom.com/external/article?articleNumber=318973"
+SolutionUserCertificateExpiredAlarm.summary="This 警报 indicates that solution 用户 证书(s) in VECS has 已过期."
+
+DataEnciphermentCertificateStatusAlarm.label="Data-encipherment 证书 in VECS is about to expire https://knowledge.broadcom.com/external/article?articleNumber=318973"
+DataEnciphermentCertificateStatusAlarm.summary="This 警报 indicates that data-encipherment 证书 in VECS is getting close to its expiration date."
+
+DataEnciphermentCertificateExpiredAlarm.label="Data-encipherment 证书 in VECS has 已过期 https://knowledge.broadcom.com/external/article?articleNumber=318973"
+DataEnciphermentCertificateExpiredAlarm.summary="This 警报 indicates that data-encipherment 证书 in VECS has 已过期."
+
+SmsCertificateStatusAlarm.label="SMS 证书 in VECS is about to expire https://knowledge.broadcom.com/external/article?articleNumber=318973"
+SmsCertificateStatusAlarm.summary="This 警报 indicates that SMS 证书 in VECS is getting close to its expiration date."
+
+SmsCertificateExpiredAlarm.label="SMS 证书 in VECS has 已过期 https://knowledge.broadcom.com/external/article?articleNumber=318973"
+SmsCertificateExpiredAlarm.summary="This 警报 indicates that SMS 证书 in VECS has 已过期."
+
+KMSClientCertificateStatusAlarm.label="KMS 客户端 证书 状态"
+KMSClientCertificateStatusAlarm.summary="This 警报 indicates that the KMS 客户端 证书 is getting close to its expiration date."
+KMSServerCertificateStatusAlarm.label="KMS 服务器 证书 状态"
+KMSServerCertificateStatusAlarm.summary="This 警报 indicates that the KMS 服务器 证书 is getting close to its expiration date."
+
+VmDirStateChangedAlarm.label="vCenter 服务器 复制 状态 更改 警报"
+VmDirStateChangedAlarm.summary="This 警报 indicates that the vCenter 服务器 复制 状态 has 已更改"
+VmdirReplicationStatusAlarm.label="vCenter 服务器 复制 状态 更改 警报"
+VmdirReplicationStatusAlarm.summary="This 警报 indicates that the vCenter 服务器 复制 状态 has 已更改"
+
+VCHAHealthAlarm.label="vCenter HA 集群 Health 警报"
+VCHAHealthAlarm.summary="Default 警报 that 监控s the 运行状况 of vCenter HA"
+PSCHAHealthAlarm.label="PSC HA Health 警报"
+PSCHAHealthAlarm.summary="Default 警报 that 监控s the 运行状况 of PSC HA"
+FailoverFailedAlarm.label="Fail超过 失败 警报"
+FailoverFailedAlarm.summary="警报 to indicate that fail超过 has 失败"
+VmdirHealthAlarm.label="VMware Directory 服务 Health 警报"
+VmdirHealthAlarm.summary="Default 警报 that 监控s the 运行状况 of VMware Directory 服务"
+
+VchaRduAlarm.label="vCenter HA 部署 失败 during vCenter 升级"
+VchaRduAlarm.summary="This 警报 indicates that the vCenter HA 部署ment 失败 during vCenter 升级"
+
+DBHealthAlarm.label="Database Health 警报"
+DBHealthAlarm.summary="Default 警报 that 监控s the database 运行状况 状态."
+
+HostIpConflictAlarm.label="主机 IP 地址 Conflict 警报"
+HostIpConflictAlarm.summary="用于indicate that the 主机 has taken an IP 地址 that conflicts with another 主机.的默认警报"
+
+TPMAttestationAlarm.label="主机 TPM at测试ation 警报"
+TPMAttestationAlarm.summary="Default 警报 that indicates 主机 TPM at测试ation failure."
+
+VMRunningOnTPMAttestationFailedHostAlarm.label="虚拟机 running on TPM at测试ation 失败 主机 警报"
+VMRunningOnTPMAttestationFailedHostAlarm.summary="This 警报 is 触发 when 虚拟机s are running 在 主机 具有 失败 TPM at测试ation. 迁移 these 虚拟机s to other 主机s."
+
+### First Class Disk alarms.
+VStorageObjectInfraNamespacePolicyAlarm.label="Improved 虚拟磁盘 infrastructure 名称spaces 存储 policy 警报"
+VStorageObjectInfraNamespacePolicyAlarm.summary="用于监控 improved 虚拟磁盘 infrastructure 名称space 存储 policy 状态 在 主机.的默认警报"
+
+VStorageObjectInfraCatalogAlarm.label="Improved 虚拟磁盘 infrastructure's cata日志 运行状况 警报"
+VStorageObjectInfraCatalogAlarm.summary="用于监控 improved 虚拟磁盘 infrastructure's cata日志 运行状况 状态 在 主机.的默认警报"
+
+### VMCrypt alarms
+VmCryptoStateLockedAlarm.label="虚拟机 锁定ed 警报"
+VmCryptoStateLockedAlarm.summary="警报 to indicate that the 虚拟机 is 锁定ed."
+
+### Host Crypto State alarms
+HostRequiresEncryptionModeEnabledAlarm.label="主机 Requires 加密 Mode 已启用 警报"
+HostRequiresEncryptionModeEnabledAlarm.summary="警报 to indicate that the 主机 requires 加密 mode 已启用."
+
+### Burst Filter alarms
+EventBurstAlarm.label="事件 Burst 警报"
+EventBurstAlarm.summary="警报 to indicate that 电流ly there is at least one 事件 burst 在 system."
+
+### WCP Service alarms
+WcpSvcAlarm.label="WCP 服务 Health 警报"
+WcpSvcAlarm.summary="Default 警报 that 监控s the 运行状况 状态 of WCP 服务."
+
+### Cluster store alarms
+ClusterStoreDegradedAlarm.label="集群 metadata store degraded 警报"
+ClusterStoreDegradedAlarm.summary="警报 that indicates that 集群 metadata store degraded 在 主机."
+
+###Alarms email tempalte
+### TriggeredAlarm
+TriggeredAlarm.Status.gray.label="Unset"
+TriggeredAlarm.Status.gray.summary="Does not 更改 the entity 状态"
+TriggeredAlarm.Status.green.label="正常"
+TriggeredAlarm.Status.green.summary="Indicates normal operation"
+TriggeredAlarm.Status.yellow.label="警告"
+TriggeredAlarm.Status.yellow.summary="Indicates an 错误"
+TriggeredAlarm.Status.red.label="Critical"
+TriggeredAlarm.Status.red.summary="Indicates an  严重 错误"
+###
+###
+Email.statefulAlarm.subject="[{newStatus}] 警报 {alarmName} on {targetType} {targetName}"
+Email.statefulAlarm.body="This email is to notify you that an 警报 has been 触发 in your vCenter:<br><b>[{newStatus}] 警报 {alarmName} on {targetType} {targetName}<br></b>because <b>{targetType} {triggeringSummary}.</b><br><table><tr><td>警报 名称</td><td>{alarmName}</td></tr><tr><td>描述</td><td>{alarmDescription}</td></tr><tr><td>Target</td><td>{targetType} {targetName}</td></tr><tr><td>状态</td><td>{newStatus} (上一个 状态: {oldStatus})</td></tr><tr><td>Triggered time</td><td>{triggeredTime}</td></tr></table>"
+###
+###
+Email.statefulEventAlarm.subject="[{newStatus}] 警报 {alarmName} on {targetType} {targetName}"
+Email.statefulEventAlarm.body="This email is to notify you that an 警报 has been 触发 in your vCenter:<br><b>[{newStatus}] 警报 {alarmName} on {targetType} {targetName}<br></b>because <b>{eventDescription}.</b><br><table><tr><td>警报 名称</td><td>{alarmName}</td></tr><tr><td>描述</td><td>{alarmDescription}</td></tr><tr><td>Target</td><td>{targetType} {targetName}</td></tr><tr><td>状态</td><td>{newStatus} (上一个 状态: {oldStatus})</td></tr><tr><td>Triggered time</td><td>{triggeredTime}</td></tr></table>"
+###
+
+###
+Email.statelessEventAlarm.subject="警报 {alarmName} on {targetType} {targetName}"
+Email.statelessEventAlarm.body="This email is to notify you that an 警报 has been 触发 in your vCenter:<br><b>警报 {alarmName} on {targetType} {targetName}<br></b>because <b>{eventDescription}.</b><br><table><tr><td>警报 名称</td><td>{alarmName}</td></tr><tr><td>描述</td><td>{alarmDescription}</td></tr><tr><td>Target</td><td>{targetType} {targetName}</td></tr><tr><td>Triggered time</td><td>{triggeredTime}</td></tr></table>"
+###
+
+Vm.label="VM"
+Host.label="Host"
+ComputeResource.label="Resource-pool"
+Datacenter.label="Datacenter"
+Datastore.label="Datastore"
+Network.label="Network"
+Folder.label="Folder"
+DVS.label="vSphere Distributed Switch"
+DVP.label="vSphere Distributed 端口组"
+Entity.label="Entity"
+
+### KMS Unreachable alarm
+KMSUnreachableAlarm.label="键 Management 服务器 Health 状态 警报"
+KMSUnreachableAlarm.summary="警报 to indicate that 键 management 服务器 不 reachable"
+
+### VMC External Storage Core Storage APIs Alarm
+VMCExternalStorageCoreStorageAPIsAlarm.label="VMC External 存储 Core 存储 APIs 警报"
+VMCExternalStorageCoreStorageAPIsAlarm.summary="警报 to notify the runtime failure 的 Core 存储 APIs for VMC External 存储"
+###
+
+### Diskchain 使用 mixed keys alarm
+DiskchainMixedKeysAlarm.label="磁盘chain Using Mixed 键s 警报"
+DiskchainMixedKeysAlarm.summary="警报 to notify that a 磁盘chain is encrypted with mixed 键s"
+###
+
+### Langley Alarms
+LangleyHostNotConfiguredAlarm.label="Trusted Infrastructure 主机 Not 已配置 警报"
+LangleyHostNotConfiguredAlarm.summary="警报 to notify that an ESX 主机, member of Trust Authority 集群 or Trusted 集群, 不 已配置."
+LangleyHostDecommissionAlarm.label="Trusted Infrastructure 主机 Decommission 警报"
+LangleyHostDecommissionAlarm.summary="警报 to notify that an ESX 主机, 已移动 out 的 Trust Authority 集群 or Trusted 集群, must be decommissioned."
+TaHostAttestStatusAlarm.label="Trusted 主机 At测试ation 失败 警报"
+TaHostAttestStatusAlarm.summary="Default 警报 which indicates that a Trusted 主机 has 失败 at测试ation 使用 已配置 Trust Authority at测试ation 服务(s)."
+TaStsCertificatesChangeAlarm.label="STS 证书s 更改 警报"
+TaStsCertificatesChangeAlarm.summary="STS 证书s have 已更改. Trust authority 集群 needs to be 已重新配置. Please execute step '导入 the Trusted 主机 信息 到 Trust Authority 集群' from 'vSphere Trust Authority manual'."
+###
+
+
+### DPUTRUST alarms start
+EsxtokendDpuTrustStatusAlarm.label="Esxtokend dpu-trust 失败 警报"
+EsxtokendDpuTrustStatusAlarm.summary="DPU trust 失败"
+### DPUTRUST alarms end
+### Host crypto disabled alarm
+HostCryptoDisabledAlarm.label="主机 Crypto 已禁用 警报"
+HostCryptoDisabledAlarm.summary="警报 to notify that 主机 is crypto 已禁用."
+
+### STS Signing Certificates Expiry Warning Alarm
+STSCertExpiryWarningAlarm.label="STS Signing 证书s are about to expire"
+STSCertExpiryWarningAlarm.summary="Renew STS Signing 证书s, follow https://kb.vmware.com/s/article/79248"
+
+### Identity Source LDAP Certificate Expiry Warning Alarm
+LDAPCertExpiryWarningAlarm.label="IDEntity Source LDAP 证书 is about to expire"
+LDAPCertExpiryWarningAlarm.summary="Renew IDEntity Source LDAP 证书"
+
+### WS1 User/Group Sync Token Expiry Warning Alarm
+WS1SyncTokenExpiryWarningAlarm.label="IDEntity ProvIDEr 用户s 和 组s token is about to expire"
+WS1SyncTokenExpiryWarningAlarm.summary="Renew IDEntity ProvIDEr 用户s 和 组s token by navigating 到 IDEntity ProvIDEr 配置 page"
+
+### WS1 External IDP SSL Trust Expiry Warning Alarm
+WS1SSLTrustExpiryWarningAlarm.label="WS1 External IDP SSL Trust 证书s are about to expire"
+WS1SSLTrustExpiryWarningAlarm.summary="Renew External IDP SSL Trust 证书s by navigating 到 IDEntity ProvIDEr 配置 page"
+
+### Host Time Sync Alarm
+HostTimeSyncAlarm.label="主机 has lost time 同步hronization"
+HostTimeSyncAlarm.summary="Review the 主机 Time 服务 配置 和 电流 operational 状态 re端口."
+
+### Key Provider Not Backed Up Alarm
+KeyProviderNotBackedUpAlarm.label="键 ProvIDEr Not Backed Up"
+KeyProviderNotBackedUpAlarm.summary="警报 to indicate that one or more 键 provIDErs require 备份."
+
+### Host Config Encryption Recovery Key Alarm
+HostTpmConfigEncryptionAlarm.label="TPM 加密 Rec超过y 键 备份 警报"
+HostTpmConfigEncryptionAlarm.summary="Default 警报 which indicates that 主机 配置 is TPM encrypted. Rec超过y 键 备份 may be performed in order to 恢复 主机 配置 on TPM failure. https://knowledge.broadcom.com/external/article/323401"
+
+### Memory mode alarms
+HostMemoryModeHighActiveDRAMAlarm.label="主机 内存 Mode High 活动 DRAM 使用率"
+HostMemoryModeHighActiveDRAMAlarm.summary="The 警报 is 触发 when the 活动 内存 of all 虚拟机s 在 主机 exceeds the required DRAM occupancy when the 主机 is 已配置 in 内存 Mode. Please consIDEr 正在迁移 some 虚拟机s to other 主机s."
+
+VmHighPMemB和widthAlarm.label="虚拟机 High PMem 带宽 使用率"
+VmHighPMemB和widthAlarm.summary="The 警报 is 触发 when the '主机 内存 Mode High 活动 DRAM' condition is satisfied 和 this 虚拟机's PMem 带宽 is greater than the required DRAM 带宽. Please consIDEr 正在迁移 this 虚拟机 to another 主机."
+
+### Tiering Memory alarms
+TieredHostHighActiveDRAMAlarm.label="Tiered 主机 High 活动 DRAM 内存 使用率"
+TieredHostHighActiveDRAMAlarm.summary="The 警报 is 触发 when the 活动 内存 of all 虚拟机s 在 主机 exceeds the required DRAM occupancy when the 主机 is 已配置 as tiered 主机. Please consIDEr 正在迁移 some 虚拟机s to other 主机s."
+
+TieredVmHighTier1B和widthAlarm.label="虚拟机 Tier 1 High 带宽 使用率"
+TieredVmHighTier1B和widthAlarm.summary="The 警报 is 触发 after 'Tiered 主机 High 活动 DRAM 内存 使用率' 警报 is raised 和 this 虚拟机's tier 1 带宽 is higher than expected. Please consIDEr 正在迁移 this 虚拟机 to another 主机."
+
+### Capacity based datastore usage alarm
+CapacityBasedDatastoreUsageAlarm.label="数据存储 使用率 on 磁盘 基于 可用 容量"
+CapacityBasedDatastoreUsageAlarm.summary="用于监控 数据存储 磁盘 使用率 基于 可用 容量 applicable for 数据存储的默认警报"
+
+###
+VmVnicUptv2Inactive.label="The UPT(Uniform Pass到) 不 activated on 网络 adapter"
+VmVnicUptv2Inactive.summary="警报 to indicate that UPT(Uniform Pass到) fails to activate on 网络 adapter"
+
+### Autonomous Cluster Disconnected Alarm
+AutonomousClusterHealthAlarm.label="Autonomous 集群 已断开连接"
+AutonomousClusterHealthAlarm.summary="Autonomous 集群 has been 已断开连接"
+
+### vCLS deploymentMode ABSENT with DRS-enabled Alarm
+VclsDrsEnabledClusterDeploymentModeAbsentAlarm.label="vSphere 集群 服务s are 已禁用 by Retreat Mode. vSphere DRS 不 functioning 和 vSphere HA will not perform optimally"
+VclsDrsEnabledClusterDeploymentModeAbsentAlarm.summary="警报 to indicate that DRS is 已启用, but vCLS mode is 设置 to ABSENT."
+
+### vCLS deploymentMode ABSENT with HA-enabled 和 DRS-disabled Alarm
+VclsHaEnabledDrsDisabledClusterDeploymentModeAbsentAlarm.label="vSphere 集群 服务s are 已禁用 by Retreat Mode. vSphere HA will not perform optimally"
+VclsHaEnabledDrsDisabledClusterDeploymentModeAbsentAlarm.summary="警报 to indicate that HA is 已启用, DRS is 已禁用, 和 vCLS mode is 设置 to ABSENT."
+
+### authz manager Alarm
+VcAuthzDataNotSyncedAlarm.label="授权 data 同步 failure."
+VcAuthzDataNotSyncedAlarm.summary="授权 data 不 being 同步, thus any la测试 更改s are 电流ly not taken into ac计数."
+
+### vpxd memory usage Alarm
+VpxdMemoryUsageLimitHitAlarm.label="警告: VPXD 内存 使用率 超过加载"
+VpxdMemoryUsageLimitHitAlarm.summary="VPXD 内存 使用率 has passed the 已配置 soft 限制."
+
+### envoy connection overload Alarm
+EdgeEnvoyClientConnectionsOverload.label="Increased 客户端 连接s 加载 on vCenter edge envoy"
+EdgeEnvoyClientConnectionsOverload.summary="警报 to indicate the 客户端 连接s 加载 on vCenter edge envoy."
+
+### csi datastore inaccesible alarm
+CSISharedDatastoreNotAccessibleAlarm.label="数据存储 no longer accessible to all 主机s 在 集群 compute 资源"
+CSISharedDatastoreNotAccessibleAlarm.summary="This 警报 is 触发 when a 数据存储 —— 上一个ly accessible to all 主机s 在 集群 compute 资源 is no longer accessible to those 主机s."
+
+### DPU failed alarm
+DpuFailedAlarm.label="DPU experienced a failure or DPU 已移除"
+DpuFailedAlarm.summary="DPU with dpuID {dpuId} experienced a failure or it was 已移除."
+
+### DPU failover alarm
+DpuFailoverAlarm.label="DPU fail超过 happened on off加载ing 已启用 vds"
+DpuFailoverAlarm.summary="DPU fail超过 from {fromDpu} to {toDpu} on vds {vds} has been 已启动."
+
+
+## DVSRuntimeInfo alarm
+HostMemberVdsStatusAlarm.label="The VDS 状态 becomes down on some 主机s"
+HostMemberVdsStatusAlarm.summary="警报 to indicate that vds 状态 is down on some 主机s"
+
+### Extension alarm
+ExtensionWithUnsupportedThumbprintModeAlarm.label="Extensions 已注册 with thumbprint hash algorithm not 支持 by vCenter 服务器"
+ExtensionWithUnsupportedThumbprintModeAlarm.summary="警报 to indicate that extensions are 已注册 with thumbprint hash algorithm not 支持 by vCenter 服务器."
+
+### WCP (VM Service) registervm failed alarm
+WCPRegisterVMFailedAlarm.label="失败 to 注册 the 虚拟机 with VM 服务 on Supervisor"
+WCPRegisterVMFailedAlarm.summary="An attempt to 注册 this 虚拟机 with VM 服务 on Supervisor 失败."
+
+## Foundation load balancer VM health state alarm
+FoundationLoadBalancerVmHealthStateAlarm.label="The foundation 加载 balancer VM becomes un运行状况y"
+FoundationLoadBalancerVmHealthStateAlarm.summary="警报 to indicate that the foundation 加载 balancer VM is un运行状况y"
+
+## Foundation load balancer VM workload alarm
+FoundationLoadBalancerWorkloadAlarm.label="The foundation 加载 balancer VM 失败 to realize some work加载s"
+FoundationLoadBalancerWorkloadAlarm.summary="警报 to indicate that the foundation 加载 balancer VM 失败 to realize some work加载s"
+
+## Foundation load balancer agent crash alarm
+FoundationLoadBalancerAgentCrashAlarm.label="The foundation 加载 balancer 代理 crashed"
+FoundationLoadBalancerAgentCrashAlarm.summary="警报 to indicate that the foundation 加载 balancer 代理 在 VM crashed"

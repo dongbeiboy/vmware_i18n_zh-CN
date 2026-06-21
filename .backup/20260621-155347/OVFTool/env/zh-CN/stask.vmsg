@@ -1,0 +1,64 @@
+# zh_CN resources
+signature="sIgNaTuRe"
+###
+###
+scheduler.RecurrentTaskScheduler.label="<internal>"
+scheduler.RecurrentTaskScheduler.summary="<internal>"
+scheduler.RecurrentTaskScheduler.frequency="<internal>"
+###
+scheduler.DailyTaskScheduler.label="每天"
+scheduler.DailyTaskScheduler.summary="计划任务将在每天的特定小时触发"
+scheduler.DailyTaskScheduler.frequency="小时"
+###
+scheduler.OnceTaskScheduler.label="一次"
+scheduler.OnceTaskScheduler.summary="计划任务将在特定时间触发一次"
+scheduler.OnceTaskScheduler.frequency="时间"
+###
+scheduler.MonthlyByDayTaskScheduler.label="每月（按日期）"
+scheduler.MonthlyByDayTaskScheduler.summary="计划任务将在每月的特定日期触发"
+scheduler.MonthlyByDayTaskScheduler.frequency="日期"
+###
+scheduler.MonthlyByWeekdayTaskScheduler.label="每月（按工作日）"
+scheduler.MonthlyByWeekdayTaskScheduler.summary="计划任务将在每月的偏移周的特定工作日触发"
+scheduler.MonthlyByWeekdayTaskScheduler.frequency="偏移周内的工作日"
+###
+scheduler.MonthlyTaskScheduler.label="每月"
+scheduler.MonthlyTaskScheduler.summary="计划任务将在每月的特定日期触发"
+scheduler.MonthlyTaskScheduler.frequency="日期"
+###
+scheduler.HourlyTaskScheduler.label="每小时"
+scheduler.HourlyTaskScheduler.summary="计划任务将在每小时的特定分钟触发"
+scheduler.HourlyTaskScheduler.frequency="分钟"
+###
+scheduler.WeeklyTaskScheduler.label="每周"
+scheduler.WeeklyTaskScheduler.summary="计划任务将在每周的特定工作日触发"
+scheduler.WeeklyTaskScheduler.frequency="工作日"
+###
+scheduler.AfterStartupTaskScheduler.label="启动后"
+scheduler.AfterStartupTaskScheduler.summary="计划任务将在 vCenter 服务器启动后的特定分钟数触发"
+scheduler.AfterStartupTaskScheduler.frequency="延迟（分钟）"
+###
+Email.statefulAlarm.subject="[VMware vCenter - 警报 {alarmName}] {alarmName} 已将状态从 {oldStatus} 更改为 {newStatus}"
+Email.statefulAlarm.body="目标: {targetName}\n上一个状态: {oldStatus}\n新状态: {newStatus}\n\n警报定义:\n{declaringSummary}\n\n{alarmValue}:\n {triggeringSummary}\n\n描述:\n{eventDescription}"
+###
+Email.statefulEventAlarm.subject="[VMware vCenter - 警报 {alarmName}] {eventDescription}"
+Email.statefulEventAlarm.body="目标: {targetName}\n上一个状态: {oldStatus}\n新状态: {newStatus}\n\n警报定义:\n{declaringSummary}\n\n{alarmValue}:\n {eventDescription}"
+###
+Email.statelessEventAlarm.subject="[VMware vCenter - 警报 {alarmName}] {eventDescription}"
+Email.statelessEventAlarm.body="目标: {targetName}\n无状态事件警报\n\n警报定义:\n{declaringSummary}\n\n{alarmValue}:\n{eventDescription}"
+###
+
+### Localized Event Detail strings:
+event.Event.label="事件"
+event.Date.label="日期"
+event.UserName.label="用户名"
+event.Vm.label="虚拟机"
+event.Host.label="主机"
+event.ComputeResource.label="资源池"
+event.Datacenter.label="数据中心"
+event.Datastore.label="数据存储"
+event.Network.label="网络"
+event.DVS.label="vSphere 分布式交换机"
+###
+event.Arguments.label="参数"
+event.Summary.label="摘要"

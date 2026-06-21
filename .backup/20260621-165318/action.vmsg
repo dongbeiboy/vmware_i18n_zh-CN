@@ -1,0 +1,19 @@
+# zh_CN resources
+signature="sIgNaTuRe"
+###
+###
+MethodAction.label="方法操作"
+MethodAction.summary="由标准实体 API 调用的操作"
+###
+SendEmailAction.label="发送电子邮件"
+SendEmailAction.summary="发送电子邮件的操作"
+###
+SendSNMPAction.label="发送 SNMP"
+SendSNMPAction.summary="发送 SNMP 告警的操作"
+###
+RunScriptAction.label="运行脚本"
+RunScriptAction.summary="运行服务器脚本的操作"
+###
+CreateTaskAction.label="创建任务"
+CreateTaskAction.summary="创建任务的操作"
+###
