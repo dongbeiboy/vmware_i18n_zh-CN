@@ -1,4 +1,4 @@
-# VMware vSphere 中文(简体)本地化翻译项目
+# VMware 中文翻译
 
 > VMware vSphere / vCenter 翻译项目 — 为vmware添加简体中文支持
 
