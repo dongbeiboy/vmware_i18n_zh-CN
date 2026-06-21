@@ -1,0 +1,1 @@
+# vmware_i18n_zh-CN
