@@ -9,6 +9,8 @@ Only operate on strings that have MIXED Chinese+English (hybrid) content.
 import csv
 import re
 import os
+import sys
+import time
 
 INPUT_FILE = os.path.join(os.path.dirname(__file__), "key_en_ja_cn.csv")
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "key_en_ja_cn_fixed.csv")
@@ -907,11 +909,29 @@ def fix_translation(key, zh_cn):
     return text
 
 
+def progress_bar(current, total, bar_len=40):
+    """Print a simple progress bar."""
+    filled = int(bar_len * current / total)
+    bar = '█' * filled + '░' * (bar_len - filled)
+    pct = current * 100 / total
+    sys.stdout.write(f'\r  [{bar}] {pct:5.1f}% ({current}/{total})')
+    sys.stdout.flush()
+
 def main():
     rows_fixed = 0
     total_rows = 0
     hybrid_count = 0
     
+    # Phase 1: count lines
+    print("正在统计行数...", end='', flush=True)
+    with open(INPUT_FILE, 'r', encoding='utf-8-sig') as infile:
+        for _ in infile:
+            total_rows += 1
+    total_rows -= 1  # exclude header
+    print(f" {total_rows} 行")
+    
+    # Phase 2: process with progress bar
+    print("正在修复翻译...")
     with open(INPUT_FILE, 'r', encoding='utf-8-sig') as infile:
         reader = csv.reader(infile)
         header = next(reader)
@@ -923,9 +943,9 @@ def main():
             return
         
         rows = [header]
+        start_time = time.time()
         
-        for row in reader:
-            total_rows += 1
+        for i, row in enumerate(reader, 1):
             if len(row) > zh_cn_idx:
                 original = row[zh_cn_idx]
                 key = row[0] if len(row) > 0 else ''
@@ -936,15 +956,26 @@ def main():
                     row[zh_cn_idx] = fixed
                     rows_fixed += 1
             rows.append(row)
+            
+            # Update progress every 100 rows
+            if i % 100 == 0 or i == total_rows:
+                progress_bar(i, total_rows)
+    
+    elapsed = time.time() - start_time
+    print(f"\n正在写入输出文件...", end='', flush=True)
     
     with open(OUTPUT_FILE, 'w', encoding='utf-8', newline='') as outfile:
         writer = csv.writer(outfile)
         writer.writerows(rows)
     
-    print(f"Total rows: {total_rows}")
-    print(f"Hybrid (CN+EN) content rows: {hybrid_count}")
-    print(f"Rows fixed: {rows_fixed}")
-    print(f"Output: {OUTPUT_FILE}")
+    print(" 完成!")
+    print(f"\n{'='*50}")
+    print(f"  总计行数:       {total_rows}")
+    print(f"  混合内容行数:   {hybrid_count}")
+    print(f"  已修复行数:     {rows_fixed}")
+    print(f"  耗时:           {elapsed:.1f} 秒")
+    print(f"  输出文件:       {OUTPUT_FILE}")
+    print(f"{'='*50}")
 
 
 if __name__ == '__main__':
